@@ -21,8 +21,8 @@ class PlayState extends FlxState
         if (chartType == "vslice")
         {
             trace("Cargando Chart de V-Slice...");
-            var parsedData = V_SliceParser.parseChart(currentSong);
-            FlxG.switchState(new V_SlicePlayState(parsedData));
+			var parsedData = VSliceParser.parseChart(currentSong);
+			FlxG.switchState(new VSlicePlayState(parsedData));
         }
         else
         {

@@ -161,11 +161,14 @@ class PsychPlayState extends FlxState
             }
         }
         
-        // Ordenamos las notas por tiempo para que aparezcan en fila perfecta
-        grpNotes.sort(function(Obj1:Note, Obj2:Note):Int {
-            if (Obj1.strumTime < Obj2.strumTime) return -1;
-            else if (Obj1.strumTime > Obj2.strumTime) return 1;
+		// Modifica esta sección al final de loadNotesFromChart()
+		grpNotes.sort(function(order:Int, Obj1:Note, Obj2:Note):Int
+		{
+			if (Obj1.strumTime < Obj2.strumTime)
+				return -1 * order;
+			else if (Obj1.strumTime > Obj2.strumTime)
+				return 1 * order;
             return 0;
-        });
-    }
+		});
+	}
 }
