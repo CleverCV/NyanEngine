@@ -6,6 +6,7 @@ import flixel.FlxSprite;
 import flixel.FlxState;
 import flixel.graphics.frames.FlxAtlasFrames;
 import flixel.group.FlxGroup.FlxTypedGroup;
+import flixel.sound.FlxSound; // Importación de sonido obligatoria
 
 class PsychPlayState extends FlxState
 {
@@ -20,6 +21,9 @@ class PsychPlayState extends FlxState
 
     var strumsData:Array<String> = ['arrowLEFT', 'arrowDOWN', 'arrowUP', 'arrowRIGHT'];
     var pressAnims:Array<String> = ['left press', 'down press', 'up press', 'right press'];
+
+	// Declaramos la variable de las voces aquí arriba para que la clase la reconozca
+	var vocals:FlxSound;
 
     public function new(parsedData:Dynamic)
     {
@@ -44,8 +48,7 @@ class PsychPlayState extends FlxState
             enemyArrow.animation.play('static');
             enemyArrow.setGraphicSize(Std.int(enemyArrow.width * 0.7));
             enemyArrow.updateHitbox();
-            enemyArrow.antialiasing = true;
-			// Aplicamos el shader al receptor enemigo pasando su dirección 'i'
+			enemyArrow.antialiasing = true;
             enemyStrums.add(enemyArrow);
 
             var playerArrow = new FlxSprite(700 + (i * 110), 50);
@@ -55,8 +58,7 @@ class PsychPlayState extends FlxState
             playerArrow.animation.play('static');
             playerArrow.setGraphicSize(Std.int(playerArrow.width * 0.7));
             playerArrow.updateHitbox();
-            playerArrow.antialiasing = true;
-			// Aplicamos el shader al receptor del jugador pasando su dirección 'i'
+			playerArrow.antialiasing = true;
             playerStrums.add(playerArrow);
         }
 
@@ -65,13 +67,54 @@ class PsychPlayState extends FlxState
         add(grpNotes);
 
         loadNotesFromChart();
+		// =======================================================
+		// SISTEMA DE CARGA DE MÚSICA (METIDO AL FINAL DE CREATE)
+		// =======================================================
+		var nombreCancion:String = StringTools.replace(PlayState.currentSong.toLowerCase(), " ", "-");
+		var rutaInst:String = "assets/shared/songs/" + nombreCancion + "/Inst.ogg";
+		var rutaVoces:String = "assets/shared/songs/" + nombreCancion + "/Voices.ogg";
+
+		// Reproducimos y pausamos el instrumental de inmediato
+		FlxG.sound.playMusic(rutaInst, 1.0, false);
+		FlxG.sound.music.pause();
+
+		// Cargamos las voces
+		vocals = new FlxSound();
+		#if sys
+		if (sys.FileSystem.exists(rutaVoces))
+		{
+			vocals.loadEmbedded(rutaVoces);
+			vocals.volume = 1.0;
+			FlxG.sound.list.add(vocals);
+		}
+		#end
+
+		// Sincronización perfecta al segundo 0
+		FlxG.sound.music.time = 0;
+		@:privateAccess
+		if (vocals != null && vocals._sound != null)
+		{
+			vocals.time = 0;
+			vocals.play();
+		}
+
+		FlxG.sound.music.play();
+		// =======================================================
     }
 
     override public function update(elapsed:Float):Void
     {
         super.update(elapsed);
 
-        songTime += elapsed * 1000;
+		// La canción avanza según el tiempo de la música de fondo real de Flixel para evitar desfases
+		if (FlxG.sound.music != null && FlxG.sound.music.playing)
+		{
+			songTime = FlxG.sound.music.time;
+		}
+		else
+		{
+			songTime += elapsed * 1000;
+		}
 
         grpNotes.forEachAlive(function(daNote:Note) {
             var targetStrumX:Float = 0;
@@ -91,6 +134,15 @@ class PsychPlayState extends FlxState
                 grpNotes.remove(daNote, true);
             }
         });
+
+		// Salir al menú Freeplay presionando Escape o Backspace
+		if (FlxG.keys.anyJustPressed([ESCAPE, BACKSPACE]))
+		{
+			if (vocals != null)
+				vocals.stop();
+			FlxG.sound.music.stop();
+			FlxG.switchState(new FreePlayState());
+		}
 
         handleInputs();
     }
@@ -163,5 +215,14 @@ class PsychPlayState extends FlxState
 				return 1 * order;
             return 0;
 		});
+	}
+	override public function destroy():Void
+	{
+		if (vocals != null)
+		{
+			vocals.stop();
+			vocals.destroy();
+		}
+		super.destroy();
 	}
 }

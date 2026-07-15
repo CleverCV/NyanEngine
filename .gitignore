@@ -1,0 +1,13 @@
+// i dont want to put the bin on the repo, so i will ignore it
+
+export/windows/bin/
+export/windows/obj/
+export/windows/haxe/
+export/windows/.files
+export/.build
+export/html5/bin/
+export/html5/obj/
+export/html5/haxe/
+export/html5/.files
+
+.vscode/

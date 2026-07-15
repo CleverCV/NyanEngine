@@ -7,6 +7,7 @@ import flixel.FlxState;
 import flixel.group.FlxGroup.FlxTypedGroup;
 import utils.Alphabet; // Importamos tu clase Alphabet
 
+
 class FreePlayState extends FlxState
 {
     var _bg:FlxSprite;
@@ -46,6 +47,7 @@ class FreePlayState extends FlxState
 
         // Aplicamos la selección inicial
         changeSelection(0);
+
     }
 
     override public function update(elapsed:Float):Void
