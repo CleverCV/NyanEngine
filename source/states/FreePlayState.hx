@@ -7,6 +7,9 @@ import flixel.FlxState;
 import flixel.group.FlxGroup.FlxTypedGroup;
 import utils.Alphabet; // Importamos tu clase Alphabet
 
+#if mobile
+import flixel.ui.FlxVirtualPad;
+#end
 
 class FreePlayState extends FlxState
 {
@@ -19,6 +22,10 @@ class FreePlayState extends FlxState
 	var grpSongs:FlxTypedGroup<Alphabet>;
     var curSelected:Int = 0;
 
+	#if mobile
+	var _virtualPad:FlxVirtualPad;
+	#end
+
     override public function create():Void
     {
         super.create();
@@ -28,7 +35,7 @@ class FreePlayState extends FlxState
         add(_bg);
 
 		// 2. Título superior dinámico usando Alphabet (Bold para que resalte)
-		var titleText = new Alphabet(0, 40, "FREEPLAY MENU", true, 1.0);
+		var titleText = new Alphabet(0, 20, "FREEPLAY MENU", true, 1.0);
 		titleText.screenCenter(X);
         add(titleText);
 
@@ -38,9 +45,8 @@ class FreePlayState extends FlxState
 
         for (i in 0...songs.length)
         {
-			// Espaciamos cada 'alphb' verticalmente basándonos en tu diseño original (i * 90)
-			// Usamos 'true' para Bold si quieres la tipografía de menú clásica de FNF
-			var alphb:Alphabet = new Alphabet(80, 180 + (i * 90), songs[i], true, 0.9);
+			// CAMBIADO: Mayor separación vertical (i * 135) y movido a la derecha en X (120) para evitar que se amontone
+			var alphb:Alphabet = new Alphabet(120, 160 + (i * 135), songs[i], true, 0.9);
 			alphb.ID = i; // Guardamos su ID para identificarlo
 			grpSongs.add(alphb);
         }
@@ -48,31 +54,101 @@ class FreePlayState extends FlxState
         // Aplicamos la selección inicial
         changeSelection(0);
 
+		// 4. Agregar Virtual Pad para Android y hacerlo más grande
+		#if mobile
+		_virtualPad = new FlxVirtualPad(flixel.ui.FlxVirtualPad.FlxDPadMode.UP_DOWN, flixel.ui.FlxVirtualPad.FlxActionMode.A_B);
+		_virtualPad.alpha = 0.75;
+
+		// --- Hacemos los botones más grandes ---
+		var scaleFactor:Float = 1.5; // Ajusta este número (1.5 = 50% más grande, 2.0 = el doble de grande)
+
+		// Escalar los botones del D-Pad (Flechas)
+		if (_virtualPad.dPad != null)
+		{
+			_virtualPad.dPad.forEach(function(btn:flixel.ui.FlxButton)
+			{
+				btn.scale.set(scaleFactor, scaleFactor);
+				btn.updateHitbox(); // Súper importante para que la zona táctil coincida con el nuevo tamaño gráfico
+			});
+		}
+
+		// Escalar los botones de acción (A y B)
+		if (_virtualPad.actions != null)
+		{
+			_virtualPad.actions.forEach(function(btn:flixel.ui.FlxButton)
+			{
+				btn.scale.set(scaleFactor, scaleFactor);
+				btn.updateHitbox();
+			});
+		}
+
+		// --- Reposicionar los botones para que no se corten en las esquinas ---
+		// Desplaza el D-Pad un poco hacia la derecha y arriba para compensar la escala
+		_virtualPad.dPad.x += 15;
+		_virtualPad.dPad.y -= 35;
+
+		// Desplaza los botones A y B un poco hacia la izquierda y arriba
+		_virtualPad.actions.x -= 55;
+		_virtualPad.actions.y -= 35;
+
+		// Esto asegura que el pad se mueva al frente y no se escale de forma extraña:
+		_virtualPad.cameras = [FlxG.cameras.list[FlxG.cameras.list.length - 1]];
+		add(_virtualPad);
+		#end
     }
 
     override public function update(elapsed:Float):Void
     {
         super.update(elapsed);
 
+		// --- ENTRADAS DE CONTROL (Teclado + Botones Virtuales) ---
+		var upPressed:Bool = false;
+		var downPressed:Bool = false;
+		var backPressed:Bool = false;
+		var acceptPressed:Bool = false;
+
+		#if mobile
+		// En móviles leemos tanto el teclado por si acaso como el Pad táctil
+		upPressed = FlxG.keys.anyJustPressed([UP, W]) || _virtualPad.getButton(UP).justPressed;
+		downPressed = FlxG.keys.anyJustPressed([DOWN, S]) || _virtualPad.getButton(DOWN).justPressed;
+		backPressed = FlxG.keys.anyJustPressed([ESCAPE, BACKSPACE]) || _virtualPad.getButton(B).justPressed;
+		acceptPressed = FlxG.keys.anyJustPressed([ENTER, SPACE]) || _virtualPad.getButton(A).justPressed;
+		#else
+		// En PC solo leemos teclado
+		upPressed = FlxG.keys.anyJustPressed([UP, W]);
+		downPressed = FlxG.keys.anyJustPressed([DOWN, S]);
+		backPressed = FlxG.keys.anyJustPressed([ESCAPE, BACKSPACE]);
+		acceptPressed = FlxG.keys.anyJustPressed([ENTER, SPACE]);
+		#end
+
         // Navegación de la lista
-        if (FlxG.keys.anyJustPressed([UP, W]))
+		if (upPressed)
         {
             changeSelection(-1);
         }
-        if (FlxG.keys.anyJustPressed([DOWN, S]))
+		if (downPressed)
         {
             changeSelection(1);
         }
 
-        // Regresar al MainMenu con la tecla ESCAPE o BACKSPACE
-        if (FlxG.keys.anyJustPressed([ESCAPE, BACKSPACE]))
+		// Regresar al MainMenu
+		if (backPressed)
         {
+			#if mobile
+			if (_virtualPad != null)
+				_virtualPad = flixel.util.FlxDestroyUtil.destroy(_virtualPad);
+			#end
             FlxG.switchState(new MainMenu());
         }
 
-        // Seleccionar canción con ENTER
-        if (FlxG.keys.anyJustPressed([ENTER, SPACE]))
+		// Seleccionar canción
+		if (acceptPressed)
         {
+			#if mobile
+			if (_virtualPad != null)
+				_virtualPad = flixel.util.FlxDestroyUtil.destroy(_virtualPad);
+			#end
+
             var selectedSongName = songs[curSelected];
             trace("Cargando chart para: " + selectedSongName);
 
@@ -101,13 +177,13 @@ class FreePlayState extends FlxState
 			{
 				alphb.color = 0xFFFFFF00; // Tinte Amarillo brillante para el texto seleccionado
 				alphb.alpha = 1.0; // Totalmente visible
-				alphb.x = 110; // Se mueve ligeramente a la derecha (+30px)
+				alphb.x = 150; // CAMBIADO: Se mueve ligeramente a la derecha (Base 120 + 30px offset)
             }
             else
             {
 				alphb.color = 0xFFFFFFFF; // Blanco / color original sin tintar
 				alphb.alpha = 0.6; // Opacidad reducida para las letras inactivas
-				alphb.x = 80; // Regresa a su posición X base
+				alphb.x = 120; // CAMBIADO: Regresa a su nueva posición X base de 120
             }
         });
     }

@@ -9,12 +9,19 @@ class Note extends FlxSprite
     public var noteData:Int = 0; 
     public var mustHit:Bool = false; 
 
-    public function new(strumTime:Float, noteData:Int, mustHit:Bool)
+	// --- VARIABLES NUEVAS PARA SUSTAINS ---
+	public var isSustainNote:Bool = false;
+	public var parentNote:Note = null;
+	public var sustainLength:Float = 0;
+	public var wasPressed:Bool = false;
+
+	public function new(strumTime:Float, noteData:Int, mustHit:Bool, isSustainNote:Bool = false, isLastSustain:Bool = false)
     {
         super();
         this.strumTime = strumTime;
         this.noteData = noteData;
         this.mustHit = mustHit;
+		this.isSustainNote = isSustainNote;
 
         // Path looking inside your target assets directory
         frames = FlxAtlasFrames.fromSparrow(
@@ -28,16 +35,59 @@ class Note extends FlxSprite
         animation.addByPrefix('greenScroll', 'green0');   // Targets green0000
         animation.addByPrefix('redScroll', 'red0');       // Targets red0000
 
-        switch (noteData)
-        {
-            case 0: animation.play('purpleScroll');
-            case 1: animation.play('blueScroll');
-            case 2: animation.play('greenScroll');
-            case 3: animation.play('redScroll');
+		// --- ANIMACIONES DE SUSTAINS PARA EL XML DE PSYCH ENGINE ---
+		animation.addByPrefix('purplehold', 'purple hold piece');
+		animation.addByPrefix('purpleholdend', 'purple hold end');
+		animation.addByPrefix('bluehold', 'blue hold piece');
+		animation.addByPrefix('blueholdend', 'blue hold end');
+		animation.addByPrefix('greenhold', 'green hold piece');
+		animation.addByPrefix('greenholdend', 'green hold end');
+		animation.addByPrefix('redhold', 'red hold piece');
+		animation.addByPrefix('redholdend', 'red hold end');
+
+		var colorNames:Array<String> = ['purple', 'blue', 'green', 'red'];
+		var color:String = colorNames[noteData];
+
+		if (isSustainNote)
+		{
+			if (isLastSustain)
+			{
+				animation.play(color + 'holdend');
+			}
+			else
+			{
+				animation.play(color + 'hold');
+			}
+
+			alpha = 0.6;
+		}
+		else
+		{
+			switch (noteData)
+			{
+				case 0:
+					animation.play('purpleScroll');
+				case 1:
+					animation.play('blueScroll');
+				case 2:
+					animation.play('greenScroll');
+				case 3:
+					animation.play('redScroll');
+			}
         }
 
-        setGraphicSize(Std.int(width * 0.7));
-        updateHitbox();
+		// Escalamos las notas de forma limpia e independiente
+		if (isSustainNote)
+		{
+			scale.set(0.7, 0.7);
+			updateHitbox();
+		}
+		else
+		{
+			setGraphicSize(Std.int(width * 0.7));
+			updateHitbox();
+		}
+        
         antialiasing = true;
     }
 }

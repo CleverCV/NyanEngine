@@ -43,8 +43,18 @@ class PsychParser
     {
         var dummyNotes:Array<Dynamic> = [];
         for (i in 0...40) {
-            // Estructura típica de nota FNF: [strumTime, noteData, mustache/mustHit]
-            dummyNotes.push([1000 + (i * 300), i % 4, (i % 2 == 0 ? true : false)]);
+			// Estructura REAL de nota de Psych Engine:
+			// [strumTime (Float), noteData (Int), sustainLength (Float), noteType (String/Int)]
+
+			// Haremos que cada 5 notas aparezca una nota larga de 800 milisegundos para probar
+			var sustainDuration:Float = (i % 5 == 0) ? 800.0 : 0.0;
+
+			dummyNotes.push([
+				1000 + (i * 300), // strumTime
+				i % 4, // noteData (0-3 para el jugador, 4-7 para el rival)
+				sustainDuration, // sustainLength (duración de la nota larga)
+				0 // noteType (0 = normal)
+			]);
         }
 
         return {
