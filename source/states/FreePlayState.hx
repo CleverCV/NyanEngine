@@ -5,44 +5,43 @@ import flixel.FlxG;
 import flixel.FlxSprite;
 import flixel.FlxState;
 import flixel.group.FlxGroup.FlxTypedGroup;
-import flixel.text.FlxText;
+import utils.Alphabet; // Importamos tu clase Alphabet
 
 class FreePlayState extends FlxState
 {
     var _bg:FlxSprite;
     
-    // Lista de canciones que aparecerán en tu menú (agrega o cambia los nombres aquí)
-    var songs:Array<String> = ["Tutorial", "Bopeebo", "Fresh", "Dad Battle", "Test Song"];
+	// Lista de canciones que aparecerán en tu menú
+	var songs:Array<String> = ["tutorial", "bopeebo", "fresh", "dad battle", "test song"];
     
-    // Grupo para controlar todos los textos de las canciones
-    var grpSongs:FlxTypedGroup<FlxText>;
+	// Grupo modificado para controlar los objetos Alphabet de las canciones
+	var grpSongs:FlxTypedGroup<Alphabet>;
     var curSelected:Int = 0;
 
     override public function create():Void
     {
         super.create();
 
-        // 1. Cargamos el fondo amarillo que pediste
+		// 1. Cargamos el fondo amarillo
         _bg = new FlxSprite(0, 0, "assets/shared/images/backgrounds/bg_yellow.png");
         add(_bg);
 
-        // 2. Título superior estático
-        var titleText = new FlxText(0, 20, 0, "FREEPLAY MENU", 40);
-        titleText.screenCenter(X);
-        titleText.setFormat(null, 40, 0xFF000000, CENTER); // Texto negro
+		// 2. Título superior dinámico usando Alphabet (Bold para que resalte)
+		var titleText = new Alphabet(0, 40, "FREEPLAY MENU", true, 1.0);
+		titleText.screenCenter(X);
         add(titleText);
 
-        // 3. Crear los textos de las canciones dinámicamente
-        grpSongs = new FlxTypedGroup<FlxText>();
+		// 3. Crear los textos del alfabeto para las canciones dinámicamente
+		grpSongs = new FlxTypedGroup<Alphabet>();
         add(grpSongs);
 
         for (i in 0...songs.length)
         {
-            // Espaciamos cada texto verticalmente en base a su índice (i * 60)
-            var songText = new FlxText(80, 150 + (i * 60), 0, songs[i], 32);
-            songText.setFormat(null, 32, 0xFFFFFFFF, LEFT, OUTLINE, 0xFF000000); // Texto blanco con borde negro
-            songText.ID = i; // Guardamos su ID para identificarlo
-            grpSongs.add(songText);
+			// Espaciamos cada 'alphb' verticalmente basándonos en tu diseño original (i * 90)
+			// Usamos 'true' para Bold si quieres la tipografía de menú clásica de FNF
+			var alphb:Alphabet = new Alphabet(80, 180 + (i * 90), songs[i], true, 0.9);
+			alphb.ID = i; // Guardamos su ID para identificarlo
+			grpSongs.add(alphb);
         }
 
         // Aplicamos la selección inicial
@@ -77,7 +76,7 @@ class FreePlayState extends FlxState
 
             // Configuramos los datos en el enrutador antes de cambiar
             PlayState.chartType = "psych"; 
-            PlayState.currentSong = selectedSongName; // El parser buscará la carpeta de esta canción automáticamente
+			PlayState.currentSong = selectedSongName; 
             
             FlxG.switchState(new PlayState());
         }
@@ -87,23 +86,26 @@ class FreePlayState extends FlxState
     {
         curSelected += change;
 
-        // Limites de la lista (Lazo/Bucle)
+		// Límites de la lista (Lazo/Bucle)
         if (curSelected < 0)
             curSelected = songs.length - 1;
         if (curSelected >= songs.length)
             curSelected = 0;
 
-        // Cambiar estilos visuales (Color y posición en X) según esté seleccionada o no
-        grpSongs.forEach(function(txt:FlxText) {
-            if (txt.ID == curSelected)
-            {
-                txt.color = 0xFFFFFF00; // Amarillo brillante si está seleccionada
-                txt.x = 110;            // Se mueve ligeramente a la derecha (+30px de base)
+		// Modificar los estados visuales del Alphabet grupalmente
+		grpSongs.forEach(function(alphb:Alphabet)
+		{
+			if (alphb.ID == curSelected)
+			{
+				alphb.color = 0xFFFFFF00; // Tinte Amarillo brillante para el texto seleccionado
+				alphb.alpha = 1.0; // Totalmente visible
+				alphb.x = 110; // Se mueve ligeramente a la derecha (+30px)
             }
             else
             {
-                txt.color = 0xFFFFFFFF; // Blanco normal si es inactiva
-                txt.x = 80;             // Posición original
+				alphb.color = 0xFFFFFFFF; // Blanco / color original sin tintar
+				alphb.alpha = 0.6; // Opacidad reducida para las letras inactivas
+				alphb.x = 80; // Regresa a su posición X base
             }
         });
     }

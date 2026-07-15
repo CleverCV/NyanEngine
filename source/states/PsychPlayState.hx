@@ -36,7 +36,7 @@ class PsychPlayState extends FlxState
         enemyStrums = new FlxTypedGroup<FlxSprite>();
         grpNotes = new FlxTypedGroup<Note>();
 
-        // Generar Receptores
+		// Generar Receptores (Strums)
         for (i in 0...4) {
             var enemyArrow = new FlxSprite(100 + (i * 110), 50);
             enemyArrow.frames = FlxAtlasFrames.fromSparrow("assets/shared/images/notes/NOTE_assets.png", "assets/shared/images/notes/NOTE_assets.xml");
@@ -45,6 +45,7 @@ class PsychPlayState extends FlxState
             enemyArrow.setGraphicSize(Std.int(enemyArrow.width * 0.7));
             enemyArrow.updateHitbox();
             enemyArrow.antialiasing = true;
+			// Aplicamos el shader al receptor enemigo pasando su dirección 'i'
             enemyStrums.add(enemyArrow);
 
             var playerArrow = new FlxSprite(700 + (i * 110), 50);
@@ -55,6 +56,7 @@ class PsychPlayState extends FlxState
             playerArrow.setGraphicSize(Std.int(playerArrow.width * 0.7));
             playerArrow.updateHitbox();
             playerArrow.antialiasing = true;
+			// Aplicamos el shader al receptor del jugador pasando su dirección 'i'
             playerStrums.add(playerArrow);
         }
 
@@ -62,7 +64,6 @@ class PsychPlayState extends FlxState
         add(playerStrums);
         add(grpNotes);
 
-        // ¡Cargamos las notas reales del JSON!
         loadNotesFromChart();
     }
 
@@ -70,10 +71,8 @@ class PsychPlayState extends FlxState
     {
         super.update(elapsed);
 
-        // Avanzar el reloj
         songTime += elapsed * 1000;
 
-        // Movimiento de Notas
         grpNotes.forEachAlive(function(daNote:Note) {
             var targetStrumX:Float = 0;
             if (daNote.mustHit) {
@@ -136,32 +135,26 @@ class PsychPlayState extends FlxState
         {
             if (section.sectionNotes == null) continue;
 
-            var notesArray:Array<Dynamic> = section.sectionNotes;
-            // Estructura de sección de Psych Engine determina quién golpea por defecto
+			var notesArray:Array<Dynamic> = section.sectionNotes;
             var sectionMustHit:Bool = section.mustHitSection; 
 
             for (noteData in notesArray)
             {
                 var strumTime:Float = noteData[0];
                 var noteType:Int = Std.int(noteData[1]);
-                
-                // En formato FNF, noteType puede ir de 0 a 7 si incluye el lado contrario de la pantalla
-                // Un noteType del 0 al 3 son las normales, del 4 al 7 suelen ser del oponente en esa sección.
+
                 var actualLane:Int = noteType % 4; 
-                
-                // Lógica de Psych Engine para decidir a qué lado va la nota:
+
                 var isPlayerNote:Bool = sectionMustHit;
                 if (noteType > 3) {
                     isPlayerNote = !sectionMustHit;
                 }
 
-                // Creamos la nota física y la metemos al grupo
                 var newNote = new Note(strumTime, actualLane, isPlayerNote);
                 grpNotes.add(newNote);
             }
         }
-        
-		// Modifica esta sección al final de loadNotesFromChart()
+
 		grpNotes.sort(function(order:Int, Obj1:Note, Obj2:Note):Int
 		{
 			if (Obj1.strumTime < Obj2.strumTime)
