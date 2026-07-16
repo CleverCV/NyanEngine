@@ -16,9 +16,8 @@ class VSlicePlayState extends FlxState
 	var grpNotes:FlxTypedGroup<Note>;
 
 	var songTime:Float = 0;
-	var scrollSpeed:Float = 2.8; // Velocidad base por defecto asignada por el parser VSlice
+	var scrollSpeed:Float = 2.8;
 
-	// Mapeo de animaciones del XML
 	var strumsData:Array<String> = ['arrowLEFT', 'arrowDOWN', 'arrowUP', 'arrowRIGHT'];
 	var pressAnims:Array<String> = ['left press', 'down press', 'up press', 'right press'];
 
@@ -26,7 +25,6 @@ class VSlicePlayState extends FlxState
 	{
 		super();
 		this.chartData = parsedData;
-		// Asignamos la velocidad si el JSON de VSlice la provee
 		if (chartData.speed != null)
 			scrollSpeed = chartData.speed;
 	}
@@ -39,10 +37,8 @@ class VSlicePlayState extends FlxState
 		enemyStrums = new FlxTypedGroup<FlxSprite>();
 		grpNotes = new FlxTypedGroup<Note>();
 
-		// Generar Receptores (Strumline)
 		for (i in 0...4)
 		{
-			// --- Flechas Enemigas ---
 			var enemyArrow = new FlxSprite(100 + (i * 110), 50);
 			enemyArrow.frames = FlxAtlasFrames.fromSparrow("assets/shared/images/notes/NOTE_assets.png", "assets/shared/images/notes/NOTE_assets.xml");
 			enemyArrow.animation.addByPrefix('static', strumsData[i] + '0'); // arrowLEFT0, etc.
@@ -52,7 +48,6 @@ class VSlicePlayState extends FlxState
 			enemyArrow.antialiasing = true;
 			enemyStrums.add(enemyArrow);
 
-			// --- Flechas Jugador ---
 			var playerArrow = new FlxSprite(700 + (i * 110), 50);
 			playerArrow.frames = FlxAtlasFrames.fromSparrow("assets/shared/images/notes/NOTE_assets.png", "assets/shared/images/notes/NOTE_assets.xml");
 			playerArrow.animation.addByPrefix('static', strumsData[i] + '0');
@@ -69,10 +64,8 @@ class VSlicePlayState extends FlxState
 	{
 		super.update(elapsed);
 
-		// Avanzar el reloj interno de la canción
 		songTime += elapsed * 1000;
 
-		// Movimiento de las Flechas (Scroll)
 		grpNotes.forEachAlive(function(daNote:Note)
 		{
 			var targetStrumX:Float = 0;
@@ -85,13 +78,11 @@ class VSlicePlayState extends FlxState
 				targetStrumX = 100 + (daNote.noteData * 110);
 			}
 
-			// Math de scroll vertical basado en la velocidad de VSlice
 			var targetY:Float = 50 + ((daNote.strumTime - songTime) * (scrollSpeed * 0.45));
 
 			daNote.x = targetStrumX;
 			daNote.y = targetY;
 
-			// Destruir flechas fuera de la pantalla superior
 			if (targetY < -100)
 			{
 				daNote.kill();
@@ -99,7 +90,6 @@ class VSlicePlayState extends FlxState
 			}
 		});
 
-		// Detectar teclas presionadas
 		handleInputs();
 	}
 
@@ -127,13 +117,12 @@ class VSlicePlayState extends FlxState
 			{
 				strum.animation.play('press', true);
 
-				// Sistema simple para golpear flechas
 				grpNotes.forEachAlive(function(daNote:Note)
 				{
 					if (daNote.mustHit && daNote.noteData == i)
 					{
 						if (Math.abs(daNote.strumTime - songTime) < 150)
-						{ // Ventana de 150ms
+						{ 
 							daNote.kill();
 							grpNotes.remove(daNote, true);
 						}
@@ -150,7 +139,6 @@ class VSlicePlayState extends FlxState
 
 	function generateDummyChart():Void
 	{
-		// Notas ficticias para probar que el gameplay y las animaciones corren bien en VSlice
 		for (i in 0...40)
 		{
 			var time:Float = 1200 + (i * 380);

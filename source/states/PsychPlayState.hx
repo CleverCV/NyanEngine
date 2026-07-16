@@ -37,7 +37,7 @@ class PsychPlayState extends FlxState
 	var hitboxGroup:FlxSpriteGroup;
 	var mobileInputState:Array<Bool> = [false, false, false, false];
 	var mobileLastInputState:Array<Bool> = [false, false, false, false];
-	var pauseButton:FlxButton; // <--- Variable global agregada correctamente aquí
+	var pauseButton:FlxButton;
 
 	#end
 
@@ -110,7 +110,6 @@ class PsychPlayState extends FlxState
 		}
 
 		FlxG.sound.music.play();
-		// Inicializamos las hitboxes táctiles en móviles
 		#if mobile
 		createHitboxes();
 		#end
@@ -128,10 +127,8 @@ class PsychPlayState extends FlxState
 		for (i in 0...4)
 		{
 			var hitboxBtn = new FlxButton(i * widthButton, 0);
-			// Creamos un gráfico invisible que cubra su sección
 			hitboxBtn.makeGraphic(widthButton, heightButton, 0x00FFFFFF);
 
-			// Eventos para actualizar la tabla de inputs móviles
 			hitboxBtn.onDown.callback = function()
 			{
 				mobileInputState[i] = true;
@@ -150,12 +147,9 @@ class PsychPlayState extends FlxState
 
 		add(hitboxGroup);
 
-		// --- BOTÓN DE PAUSA VISUAL ---
-		// Lo colocamos arriba a la derecha (coordenadas X: FlxG.width - 100, Y: 15)
 		pauseButton = new FlxButton(FlxG.width - 100, 15);
-		pauseButton.makeGraphic(80, 80, 0xAA000000); // Caja negra elegante semitransparente
+		pauseButton.makeGraphic(80, 80, 0xAA000000); 
 
-		// Símbolo de pausa "||" centrado y con buena visibilidad
 		var pauseText = new FlxText(0, 15, 80, "||", 32);
 		pauseText.alignment = CENTER;
 		pauseText.color = FlxColor.WHITE;
@@ -190,15 +184,13 @@ class PsychPlayState extends FlxState
 		}
 
         grpNotes.forEachAlive(function(daNote:Note) {
-            var targetStrumX:Float = 0;
-			// Determinar carril
+			var targetStrumX:Float = 0;
             if (daNote.mustHit) {
                 targetStrumX = 700 + (daNote.noteData * 110);
             } else {
                 targetStrumX = 100 + (daNote.noteData * 110);
             }
 
-			// --- AUTO-CENTRAR SUSTAINS EN EL EJE X ---
 			if (daNote.isSustainNote && daNote.parentNote != null)
 			{
 				daNote.x = targetStrumX + (daNote.parentNote.width / 2) - (daNote.width / 2);
@@ -208,10 +200,9 @@ class PsychPlayState extends FlxState
 				daNote.x = targetStrumX;
 			}
 
-			// --- LÓGICA DE MOVIMIENTO INDEPENDIENTE Y ESCALA DINÁMICA ---
 			if (daNote.isSustainNote)
 			{
-				var parentHeight:Float = 110 * 0.7; // Fallback por seguridad
+				var parentHeight:Float = 110 * 0.7; 
 				var parentPressed:Bool = false;
 
 				if (daNote.parentNote != null)
@@ -220,10 +211,8 @@ class PsychPlayState extends FlxState
 					parentPressed = daNote.parentNote.wasPressed;
 				}
 
-				// MATEMÁTICAS INDEPENDIENTES
 				daNote.y = 50 + ((daNote.strumTime - songTime) * (scrollSpeed * 0.45)) + (parentHeight / 2) - (daNote.height * 0.5);
 
-				// Ajuste de escala dinámico
 				if (daNote.animation.curAnim != null && !StringTools.endsWith(daNote.animation.curAnim.name, 'end'))
 				{
 					daNote.scale.y = (scrollSpeed * 0.45) * (130 / 120);
@@ -240,9 +229,6 @@ class PsychPlayState extends FlxState
 				daNote.y = 50 + ((daNote.strumTime - songTime) * (scrollSpeed * 0.45));
 			}
 
-			// ==========================================
-			//  AUTOPLAY DEL RIVAL (OPONENTE)
-			// ==========================================
 			if (!daNote.mustHit)
 			{
 				if (songTime >= daNote.strumTime)
@@ -277,16 +263,12 @@ class PsychPlayState extends FlxState
 				}
 			}
 
-			// ==========================================
-			//  LIMPIEZA DE MISSES (JUGADOR)
-			// ==========================================
 			if (daNote.mustHit && songTime > daNote.strumTime + 160 && !daNote.wasPressed)
 			{
 				daNote.kill();
 				grpNotes.remove(daNote, true);
 			}
 
-			// Seguridad por si escapan del scroll
 			if (daNote.y < -150)
 			{
                 daNote.kill();
@@ -303,8 +285,7 @@ class PsychPlayState extends FlxState
     }
 
     function handleInputs():Void
-    {
-		// 1. Detectamos las pulsaciones físicas del teclado
+	{
 		var keyboardPressed = [
 			FlxG.keys.anyPressed([LEFT, A]),
 			FlxG.keys.anyPressed([DOWN, S]),
@@ -318,7 +299,6 @@ class PsychPlayState extends FlxState
 			FlxG.keys.anyJustPressed([RIGHT, D])
 		];
 
-		// 2. Unificamos inputs
 		var keysPressed = [false, false, false, false];
 		var keysJustPressed = [false, false, false, false];
 
@@ -336,7 +316,6 @@ class PsychPlayState extends FlxState
 			#end
 		}
 
-		// 3. Procesamiento de notas
         for (i in 0...4)
         {
             var strum = playerStrums.members[i];
@@ -364,7 +343,6 @@ class PsychPlayState extends FlxState
 				});
 			}
 
-			// --- PROCESAMIENTO MIENTRAS SE MANTIENE PRESIONADO EL SUSTAIN ---
 			if (keysPressed[i])
 			{
 				grpNotes.forEachAlive(function(daNote:Note)
@@ -387,8 +365,7 @@ class PsychPlayState extends FlxState
             {
                 strum.animation.play('static');
             }
-        }
-		// 4. Al final de la lectura de inputs, respaldamos los estados táctiles en el buffer 'last'
+		}
 		#if mobile
 		for (i in 0...4)
 		{
@@ -459,11 +436,9 @@ class PsychPlayState extends FlxState
                     isPlayerNote = !sectionMustHit;
                 }
 
-				// Crear nota padre
 				var parentNote = new Note(strumTime, actualLane, isPlayerNote);
 				parentNote.sustainLength = sustainLength;
 
-				// Crear segmentos de sustain si tiene duración
 				if (sustainLength > 0)
 				{
 					var stepGap:Float = 45;
@@ -482,7 +457,6 @@ class PsychPlayState extends FlxState
 					}
 				}
 
-				// Agregamos la nota padre al final
 				grpNotes.add(parentNote);
             }
         }

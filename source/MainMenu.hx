@@ -42,29 +42,25 @@ class MainMenu extends FlxState
         _bg = new FlxSprite(0, 0, "assets/shared/images/backgrounds/bg_yellow.png");
         add(_bg);
 
-		// --- BOTÓN STORY MODE (Agrandado y reposicionado) ---
 		_storyModeBtn = new FlxSprite(_storyBaseX, 120);
         _storyModeBtn.frames = FlxAtlasFrames.fromSparrow(
             "assets/shared/images/mainmenu/menu_story_mode.png", 
             "assets/shared/images/mainmenu/menu_story_mode.xml"
 		);
         _storyModeBtn.animation.addByPrefix("idle", "story_mode selected", 24, true);
-        _storyModeBtn.animation.addByPrefix("selected", "story_mode idle", 24, true);
-		// Escalamos el botón visualmente un 40% más grande
+		_storyModeBtn.animation.addByPrefix("selected", "story_mode idle", 24, true);
 		_storyModeBtn.scale.set(1, 1);
 		_storyModeBtn.updateHitbox();
 		_storyModeBtn.antialiasing = true;
         add(_storyModeBtn);
 
-		// --- BOTÓN FREEPLAY (Agrandado y separado a Y = 360) ---
 		_freeplayBtn = new FlxSprite(_freeplayBaseX, 360); 
         _freeplayBtn.frames = FlxAtlasFrames.fromSparrow(
             "assets/shared/images/mainmenu/menu_freeplay.png", 
             "assets/shared/images/mainmenu/menu_freeplay.xml"
 		);
         _freeplayBtn.animation.addByPrefix("idle", "freeplay selected", 24, true);
-        _freeplayBtn.animation.addByPrefix("selected", "freeplay idle", 24, true);
-		// Escalamos el botón visualmente un 40% más grande
+		_freeplayBtn.animation.addByPrefix("selected", "freeplay idle", 24, true);
 		_freeplayBtn.scale.set(1, 1);
 		_freeplayBtn.updateHitbox();
 		_freeplayBtn.antialiasing = true;
@@ -86,12 +82,10 @@ class MainMenu extends FlxState
 		azurengv.antialiasing = true;
 		add(azurengv);
 
-		// 3. Inicializamos y configuramos el Pad Virtual (¡Solo en móviles!)
 		#if mobile
 		_virtualPad = new FlxVirtualPad(flixel.ui.FlxVirtualPad.FlxDPadMode.UP_DOWN, flixel.ui.FlxVirtualPad.FlxActionMode.A_B);
 		_virtualPad.alpha = 0.75;
 
-		// Escalamos los botones táctiles un 50% más (1.5) para que sea facilísimo jugar en pantallas táctiles
 		var touchScale:Float = 1.5;
 		for (button in [
 			_virtualPad.buttonUp,
@@ -107,13 +101,11 @@ class MainMenu extends FlxState
 			}
 		}
 
-		// Posicionamiento cómodo del D-Pad (Lado izquierdo)
 		_virtualPad.buttonUp.x = 40;
 		_virtualPad.buttonUp.y = FlxG.height - 260;
 		_virtualPad.buttonDown.x = 40;
 		_virtualPad.buttonDown.y = FlxG.height - 140;
 
-		// Posicionamiento cómodo de los Botones de Acción (Lado derecho bien separados)
 		_virtualPad.buttonB.x = FlxG.width - 140;
 		_virtualPad.buttonB.y = FlxG.height - 140;
 		_virtualPad.buttonA.x = FlxG.width - 260;
@@ -129,7 +121,6 @@ class MainMenu extends FlxState
     {
         super.update(elapsed);
 
-		// --- DETECTAR ENTRADAS DE CONTROL ---
 
 		var upPressed:Bool = false;
 		var downPressed:Bool = false;
@@ -145,7 +136,6 @@ class MainMenu extends FlxState
 		acceptPressed = FlxG.keys.anyJustPressed([ENTER, SPACE]) || _virtualPad.buttonA.justPressed;
 		#end
 
-		// 4. Ejecutamos las acciones
 		if (upPressed)
         {
             changeSelection(-1);
@@ -169,7 +159,6 @@ class MainMenu extends FlxState
         if (curSelected > 1)
             curSelected = 0;
 
-		// Sumamos 15 de offset en X al estar seleccionados para dar un feedback visual más notorio
         if (curSelected == 0)
         {
 			_storyModeBtn.x = _storyBaseX + 15;
@@ -194,8 +183,7 @@ class MainMenu extends FlxState
     }
 
     function goToState():Void
-    {
-		// 5. Destruimos el Pad Virtual al cambiar de estado para liberar memoria
+	{
 		#if mobile
 		if (_virtualPad != null)
 			_virtualPad = flixel.util.FlxDestroyUtil.destroy(_virtualPad);

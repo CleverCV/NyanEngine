@@ -9,7 +9,6 @@ import states.VSlicePlayState;
 
 class PlayState extends FlxState
 {
-    // ¡Asegúrate de que tengan 'public static var' para que FreePlayState las pueda ver!
     public static var currentSong:String = "tutorial";
     public static var chartType:String = "psych"; 
 
@@ -17,7 +16,6 @@ class PlayState extends FlxState
     {
         super.create();
 
-        // El enrutador revisa el tipo de chart e inicializa el parser correcto
         if (chartType == "vslice")
         {
             trace("Cargando Chart de V-Slice...");

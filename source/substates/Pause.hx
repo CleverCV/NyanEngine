@@ -20,12 +20,10 @@ class Pause extends FlxSubState
     {
         super();
 
-        // 1. Fondo oscuro semi-transparente
         bg = new FlxSprite().makeGraphic(FlxG.width, FlxG.height, 0xFF000000);
         bg.alpha = 0.6;
         add(bg);
 
-        // 2. Grupo para las opciones del menú con tu Alphabet
         grpMenuShit = new FlxTypedGroup<Alphabet>();
         add(grpMenuShit);
 
@@ -43,7 +41,6 @@ class Pause extends FlxSubState
     {
         super.update(elapsed);
 
-        // Navegación de la lista
         if (FlxG.keys.anyJustPressed([UP, W]))
         {
             changeSelection(-1);
@@ -53,7 +50,6 @@ class Pause extends FlxSubState
             changeSelection(1);
         }
 
-        // Seleccionar una opción
         if (FlxG.keys.anyJustPressed([ENTER, SPACE]))
         {
             var daSelected:String = menuItems[curSelected];
@@ -61,11 +57,9 @@ class Pause extends FlxSubState
             switch (daSelected)
             {
                 case "RESUME":
-                    close(); // Cierra la pausa y vuelve al juego
-
+                    close(); 
                 case "RESTART":
-                    FlxG.resetState(); // Reinicia el PsychPlayState
-
+                    FlxG.resetState();
                 case "EXIT":
                     FlxG.sound.music.stop();
                     FlxG.switchState(new FreePlayState());
@@ -86,13 +80,13 @@ class Pause extends FlxSubState
         {
             if (item.ID == curSelected)
             {
-                item.color = 0xFFFFFF00; // Amarillo
+                item.color = 0xFFFFFF00; 
                 item.alpha = 1.0;
-                item.x = 110; // Desplazamiento
+                item.x = 110; 
             }
             else
             {
-                item.color = 0xFFFFFFFF; // Blanco
+                item.color = 0xFFFFFFFF; 
                 item.alpha = 0.6;
                 item.x = 80;
             }

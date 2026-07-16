@@ -1,4 +1,4 @@
-package parsers; // ¡Tiene que decir parsers, no states!
+package parsers;
 
 class VSliceParser
 {

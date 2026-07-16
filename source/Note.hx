@@ -23,19 +23,16 @@ class Note extends FlxSprite
         this.mustHit = mustHit;
 		this.isSustainNote = isSustainNote;
 
-        // Path looking inside your target assets directory
         frames = FlxAtlasFrames.fromSparrow(
             "assets/shared/images/notes/NOTE_assets.png", 
             "assets/shared/images/notes/NOTE_assets.xml"
         );
 
-        // Fixed names to target your specific XML configuration
-        animation.addByPrefix('purpleScroll', 'purple0'); // Targets purple0000
-        animation.addByPrefix('blueScroll', 'blue0');     // Targets blue0000
-        animation.addByPrefix('greenScroll', 'green0');   // Targets green0000
-        animation.addByPrefix('redScroll', 'red0');       // Targets red0000
+		animation.addByPrefix('purpleScroll', 'purple0');
+		animation.addByPrefix('blueScroll', 'blue0');
+		animation.addByPrefix('greenScroll', 'green0');
+		animation.addByPrefix('redScroll', 'red0');       
 
-		// --- ANIMACIONES DE SUSTAINS PARA EL XML DE PSYCH ENGINE ---
 		animation.addByPrefix('purplehold', 'purple hold piece');
 		animation.addByPrefix('purpleholdend', 'purple hold end');
 		animation.addByPrefix('bluehold', 'blue hold piece');
@@ -76,7 +73,6 @@ class Note extends FlxSprite
 			}
         }
 
-		// Escalamos las notas de forma limpia e independiente
 		if (isSustainNote)
 		{
 			scale.set(0.7, 0.7);
