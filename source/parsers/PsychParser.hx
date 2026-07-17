@@ -11,7 +11,7 @@ class PsychParser
 
         var jsonPath = "assets/shared/data/" + formattedSong + "/" + formattedSong + ".json";
         
-        trace("PsychParser: Intentando cargar JSON desde: " + jsonPath);
+		trace("PsychParser: Intentando cargar el chart para PsychEngine: " + jsonPath);
 
         try {
             if (Assets.exists(jsonPath))

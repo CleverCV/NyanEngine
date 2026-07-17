@@ -29,7 +29,8 @@ class PsychPlayState extends FlxState
     var strumsData:Array<String> = ['arrowLEFT', 'arrowDOWN', 'arrowUP', 'arrowRIGHT'];
     var pressAnims:Array<String> = ['left press', 'down press', 'up press', 'right press'];
 
-	var vcrtxt:FlxText;
+	var psychparsr:FlxText;
+
 
 	var vocals:FlxSound;
 
@@ -51,6 +52,15 @@ class PsychPlayState extends FlxState
     override public function create():Void
     {
         super.create();
+
+		psychparsr = new FlxText(10, FlxG.height - 54, 0, "PsychEngine Parser Indev 1.7", 16);
+		psychparsr.font = "assets/fonts/vcr.ttf";
+		psychparsr.color = FlxColor.WHITE;
+		psychparsr.setFormat(psychparsr.font, 18, FlxColor.WHITE, LEFT);
+		psychparsr.setBorderStyle(FlxTextBorderStyle.OUTLINE, FlxColor.BLACK, 1.5);
+		psychparsr.antialiasing = true;
+		add(psychparsr);
+
 
         playerStrums = new FlxTypedGroup<FlxSprite>();
         enemyStrums = new FlxTypedGroup<FlxSprite>();
@@ -87,6 +97,7 @@ class PsychPlayState extends FlxState
 		var rutaInst:String = "assets/shared/songs/" + nombreCancion + "/Inst.ogg";
 		var rutaVoces:String = "assets/shared/songs/" + nombreCancion + "/Voices.ogg";
 		trace("Ruta de la Inst: " + rutaInst);
+		trace("Ruta de las Voces: " + rutaVoces);
 
 		FlxG.sound.playMusic(rutaInst, 1.0, false);
 		FlxG.sound.music.pause();
