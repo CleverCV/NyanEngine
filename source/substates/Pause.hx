@@ -29,7 +29,7 @@ class Pause extends FlxSubState
 
         for (i in 0...menuItems.length)
         {
-            var item:Alphabet = new Alphabet(80, 200 + (i * 120), menuItems[i], true, 1.0);
+            var item:Alphabet = new Alphabet(80, 200 + (i * 120), menuItems[i], true);
             item.ID = i;
             grpMenuShit.add(item);
         }

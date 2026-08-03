@@ -5,7 +5,7 @@ import flixel.FlxG;
 import flixel.FlxSprite;
 import flixel.FlxState;
 import flixel.group.FlxGroup.FlxTypedGroup;
-import utils.Alphabet; // Importamos tu clase Alphabet
+import utils.Alphabet;
 
 #if mobile
 import flixel.ui.FlxVirtualPad;
@@ -13,51 +13,61 @@ import flixel.ui.FlxVirtualPad;
 
 class FreePlayState extends FlxState
 {
-    var _bg:FlxSprite;
+	var _bg:FlxSprite;
 
-	var songs:Array<String> = ["tutorial", "bopeebo", "fresh", "dad battle", "test song"];
+	// Lista vacía; se llenará desde el TXT
+	var songs:Array<String> = [];
 
 	var grpSongs:FlxTypedGroup<Alphabet>;
-    var curSelected:Int = 0;
+	var curSelected:Int = 0;
 
 	#if mobile
 	var _virtualPad:FlxVirtualPad;
 	#end
 
-    override public function create():Void
-    {
-        super.create();
+	override public function create():Void
+	{
+		super.create();
 
-        _bg = new FlxSprite(0, 0, "assets/shared/images/backgrounds/bg_yellow.png");
-        add(_bg);
+		// Inicializar datos de letras de Psych Engine
+		utils.Alphabet.AlphaCharacter.loadAlphabetData();
 
-		var titleText = new Alphabet(0, 20, "FREEPLAY MENU", true, 1.0);
+		// 1. Cargar la lista de canciones desde assets/data/freeplaylist.txt
+		songs = loadSongsFromTxt('assets/data/freeplaylist.txt');
+
+		_bg = new FlxSprite(0, 0, "assets/shared/images/backgrounds/bg_yellow.png");
+		add(_bg);
+
+		// Título del menú usando minúsculas y bold = false (fuente normal)
+		var titleText = new Alphabet(0, 20, "freeplay menu", false);
 		titleText.screenCenter(X);
-        add(titleText);
+		add(titleText);
 
 		grpSongs = new FlxTypedGroup<Alphabet>();
-        add(grpSongs);
+		add(grpSongs);
 
-        for (i in 0...songs.length)
+		for (i in 0...songs.length)
 		{
-			var alphb:Alphabet = new Alphabet(120, 160 + (i * 135), songs[i], true, 0.9);
-			alphb.ID = i; 
+			// Constructor de Psych 0.7: (x, y, text, bold)
+			var alphb:Alphabet = new Alphabet(120, 160 + (i * 135), songs[i], true);
+			alphb.setScale(0.9); // Escala para ajustar el tamaño del texto
+			alphb.ID = i;
 			grpSongs.add(alphb);
-        }
+		}
 
-        changeSelection(0);
+		changeSelection(0);
 
 		#if mobile
 		_virtualPad = new FlxVirtualPad(flixel.ui.FlxVirtualPad.FlxDPadMode.UP_DOWN, flixel.ui.FlxVirtualPad.FlxActionMode.A_B);
 		_virtualPad.alpha = 0.75;
 
-		var scaleFactor:Float = 1.5; 
+		var scaleFactor:Float = 1.5;
 		if (_virtualPad.dPad != null)
 		{
 			_virtualPad.dPad.forEach(function(btn:flixel.ui.FlxButton)
 			{
 				btn.scale.set(scaleFactor, scaleFactor);
-				btn.updateHitbox(); 
+				btn.updateHitbox();
 			});
 		}
 
@@ -79,11 +89,11 @@ class FreePlayState extends FlxState
 		_virtualPad.cameras = [FlxG.cameras.list[FlxG.cameras.list.length - 1]];
 		add(_virtualPad);
 		#end
-    }
+	}
 
-    override public function update(elapsed:Float):Void
-    {
-        super.update(elapsed);
+	override public function update(elapsed:Float):Void
+	{
+		super.update(elapsed);
 
 		var upPressed:Bool = false;
 		var downPressed:Bool = false;
@@ -103,48 +113,47 @@ class FreePlayState extends FlxState
 		#end
 
 		if (upPressed)
-        {
-            changeSelection(-1);
-        }
+		{
+			changeSelection(-1);
+		}
 		if (downPressed)
-        {
-            changeSelection(1);
-        }
+		{
+			changeSelection(1);
+		}
 
 		if (backPressed)
-        {
+		{
 			#if mobile
 			if (_virtualPad != null)
 				_virtualPad = flixel.util.FlxDestroyUtil.destroy(_virtualPad);
 			#end
-            FlxG.switchState(new MainMenu());
-        }
+			FlxG.switchState(new MainMenu());
+		}
 
 		if (acceptPressed)
-        {
+		{
 			#if mobile
 			if (_virtualPad != null)
 				_virtualPad = flixel.util.FlxDestroyUtil.destroy(_virtualPad);
 			#end
 
-            var selectedSongName = songs[curSelected];
-            trace("Cargando chart para: " + selectedSongName);
+			var selectedSongName = songs[curSelected];
+			trace("Cargando chart para: " + selectedSongName);
 
-            PlayState.chartType = "psych"; 
+			PlayState.chartType = "psych"; 
 			PlayState.currentSong = selectedSongName; 
-            
-            FlxG.switchState(new PlayState());
-        }
-    }
+			FlxG.switchState(new PlayState());
+		}
+	}
 
-    function changeSelection(change:Int = 0):Void
-    {
-        curSelected += change;
+	function changeSelection(change:Int = 0):Void
+	{
+		curSelected += change;
 
-        if (curSelected < 0)
-            curSelected = songs.length - 1;
-        if (curSelected >= songs.length)
-            curSelected = 0;
+		if (curSelected < 0)
+			curSelected = songs.length - 1;
+		if (curSelected >= songs.length)
+			curSelected = 0;
 
 		grpSongs.forEach(function(alphb:Alphabet)
 		{
@@ -153,13 +162,51 @@ class FreePlayState extends FlxState
 				alphb.color = 0xFFFFFF00;
 				alphb.alpha = 1.0;
 				alphb.x = 150; 
-            }
-            else
-            {
+			}
+			else
+			{
 				alphb.color = 0xFFFFFFFF;
 				alphb.alpha = 0.6;
 				alphb.x = 120; 
-            }
-        });
-    }
+			}
+		});
+	}
+	// Función auxiliar para leer el TXT sin importar si es Windows o Mobile
+	private function loadSongsFromTxt(path:String):Array<String>
+	{
+		var loadedList:Array<String> = [];
+
+		#if sys
+		if (sys.FileSystem.exists(path))
+		{
+			var rawText:String = sys.io.File.getContent(path);
+			loadedList = rawText.split('\n');
+			for (i in 0...loadedList.length)
+			{
+				loadedList[i] = StringTools.trim(loadedList[i]);
+			}
+		}
+		#else
+		if (openfl.utils.Assets.exists(path))
+		{
+			var rawText:String = openfl.utils.Assets.getText(path);
+			loadedList = rawText.split('\n');
+			for (i in 0...loadedList.length)
+			{
+				loadedList[i] = StringTools.trim(loadedList[i]);
+			}
+		}
+		#end
+
+		// Filtrar renglones vacíos
+		loadedList = loadedList.filter(function(s:String) return s.length > 0);
+
+		// Canción por defecto si el archivo no existe o está vacío
+		if (loadedList.length == 0)
+		{
+			loadedList = ["tutorial"];
+		}
+
+		return loadedList;
+	}
 }

@@ -1,0 +1,7464 @@
+{
+	"speed": 2.8,
+	"player1": "bf",
+	"player2": "pshaggy",
+	"notes": [
+		{
+			"length": 0,
+			"stepTime": 0,
+			"strumline": 0,
+			"lane": 1,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 2,
+			"strumline": 0,
+			"lane": 1,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 4,
+			"strumline": 0,
+			"lane": 2,
+			"type": null
+		},
+		{
+			"length": 3,
+			"stepTime": 6,
+			"strumline": 0,
+			"lane": 3,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 10,
+			"strumline": 0,
+			"lane": 1,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 12,
+			"strumline": 0,
+			"lane": 0,
+			"type": null
+		},
+		{
+			"length": 3,
+			"stepTime": 14,
+			"strumline": 0,
+			"lane": 2,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 18,
+			"strumline": 0,
+			"lane": 0,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 20,
+			"strumline": 0,
+			"lane": 3,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 26,
+			"strumline": 0,
+			"lane": 0,
+			"type": null
+		},
+		{
+			"length": 3,
+			"stepTime": 22,
+			"strumline": 0,
+			"lane": 1,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 28,
+			"strumline": 0,
+			"lane": 0,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 30,
+			"strumline": 0,
+			"lane": 3,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 32,
+			"strumline": 1,
+			"lane": 1,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 34,
+			"strumline": 1,
+			"lane": 1,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 42,
+			"strumline": 1,
+			"lane": 1,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 44,
+			"strumline": 1,
+			"lane": 0,
+			"type": null
+		},
+		{
+			"length": 3,
+			"stepTime": 46,
+			"strumline": 1,
+			"lane": 2,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 36,
+			"strumline": 1,
+			"lane": 2,
+			"type": null
+		},
+		{
+			"length": 3,
+			"stepTime": 38,
+			"strumline": 1,
+			"lane": 3,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 50,
+			"strumline": 1,
+			"lane": 0,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 52,
+			"strumline": 1,
+			"lane": 3,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 58,
+			"strumline": 1,
+			"lane": 0,
+			"type": null
+		},
+		{
+			"length": 3,
+			"stepTime": 54,
+			"strumline": 1,
+			"lane": 1,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 60,
+			"strumline": 1,
+			"lane": 0,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 62,
+			"strumline": 1,
+			"lane": 3,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 64,
+			"strumline": 0,
+			"lane": 1,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 68,
+			"strumline": 0,
+			"lane": 2,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 66,
+			"strumline": 0,
+			"lane": 0,
+			"type": null
+		},
+		{
+			"length": 3,
+			"stepTime": 70,
+			"strumline": 0,
+			"lane": 3,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 74,
+			"strumline": 0,
+			"lane": 1,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 76,
+			"strumline": 0,
+			"lane": 0,
+			"type": null
+		},
+		{
+			"length": 3,
+			"stepTime": 78,
+			"strumline": 0,
+			"lane": 2,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 84,
+			"strumline": 0,
+			"lane": 1,
+			"type": null
+		},
+		{
+			"length": 3,
+			"stepTime": 86,
+			"strumline": 0,
+			"lane": 3,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 90,
+			"strumline": 0,
+			"lane": 1,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 92,
+			"strumline": 0,
+			"lane": 2,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 94,
+			"strumline": 0,
+			"lane": 0,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 82,
+			"strumline": 0,
+			"lane": 0,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 96,
+			"strumline": 1,
+			"lane": 1,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 100,
+			"strumline": 1,
+			"lane": 2,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 98,
+			"strumline": 1,
+			"lane": 0,
+			"type": null
+		},
+		{
+			"length": 3,
+			"stepTime": 102,
+			"strumline": 1,
+			"lane": 3,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 106,
+			"strumline": 1,
+			"lane": 1,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 108,
+			"strumline": 1,
+			"lane": 0,
+			"type": null
+		},
+		{
+			"length": 3,
+			"stepTime": 110,
+			"strumline": 1,
+			"lane": 2,
+			"type": null
+		},
+		{
+			"length": 3,
+			"stepTime": 118,
+			"strumline": 1,
+			"lane": 3,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 122,
+			"strumline": 1,
+			"lane": 1,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 124,
+			"strumline": 1,
+			"lane": 2,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 126,
+			"strumline": 1,
+			"lane": 0,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 116,
+			"strumline": 1,
+			"lane": 1,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 114,
+			"strumline": 1,
+			"lane": 0,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 128,
+			"strumline": 0,
+			"lane": 1,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 132,
+			"strumline": 0,
+			"lane": 0,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 134,
+			"strumline": 0,
+			"lane": 1,
+			"type": null
+		},
+		{
+			"length": 3,
+			"stepTime": 136,
+			"strumline": 0,
+			"lane": 2,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 140,
+			"strumline": 0,
+			"lane": 1,
+			"type": null
+		},
+		{
+			"length": 3,
+			"stepTime": 142,
+			"strumline": 0,
+			"lane": 3,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 130,
+			"strumline": 0,
+			"lane": 3,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 148,
+			"strumline": 0,
+			"lane": 0,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 150,
+			"strumline": 0,
+			"lane": 0,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 146,
+			"strumline": 0,
+			"lane": 2,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 154,
+			"strumline": 0,
+			"lane": 1,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 158,
+			"strumline": 0,
+			"lane": 3,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 156,
+			"strumline": 0,
+			"lane": 2,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 152,
+			"strumline": 0,
+			"lane": 2,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 164,
+			"strumline": 0,
+			"lane": 3,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 166,
+			"strumline": 0,
+			"lane": 2,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 162,
+			"strumline": 0,
+			"lane": 0,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 172,
+			"strumline": 0,
+			"lane": 2,
+			"type": null
+		},
+		{
+			"length": 3,
+			"stepTime": 168,
+			"strumline": 0,
+			"lane": 0,
+			"type": null
+		},
+		{
+			"length": 3,
+			"stepTime": 174,
+			"strumline": 0,
+			"lane": 3,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 160,
+			"strumline": 0,
+			"lane": 1,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 180,
+			"strumline": 0,
+			"lane": 3,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 182,
+			"strumline": 0,
+			"lane": 3,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 178,
+			"strumline": 0,
+			"lane": 1,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 184,
+			"strumline": 0,
+			"lane": 1,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 186,
+			"strumline": 0,
+			"lane": 2,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 188,
+			"strumline": 0,
+			"lane": 1,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 190,
+			"strumline": 0,
+			"lane": 0,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 192,
+			"strumline": 1,
+			"lane": 1,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 196,
+			"strumline": 1,
+			"lane": 0,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 198,
+			"strumline": 1,
+			"lane": 1,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 204,
+			"strumline": 1,
+			"lane": 1,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 194,
+			"strumline": 1,
+			"lane": 3,
+			"type": null
+		},
+		{
+			"length": 3,
+			"stepTime": 206,
+			"strumline": 1,
+			"lane": 0,
+			"type": null
+		},
+		{
+			"length": 3,
+			"stepTime": 200,
+			"strumline": 1,
+			"lane": 2,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 210,
+			"strumline": 1,
+			"lane": 2,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 216,
+			"strumline": 1,
+			"lane": 2,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 218,
+			"strumline": 1,
+			"lane": 1,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 220,
+			"strumline": 1,
+			"lane": 2,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 222,
+			"strumline": 1,
+			"lane": 3,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 212,
+			"strumline": 1,
+			"lane": 1,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 214,
+			"strumline": 1,
+			"lane": 0,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 228,
+			"strumline": 1,
+			"lane": 3,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 230,
+			"strumline": 1,
+			"lane": 2,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 226,
+			"strumline": 1,
+			"lane": 0,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 236,
+			"strumline": 1,
+			"lane": 2,
+			"type": null
+		},
+		{
+			"length": 3,
+			"stepTime": 232,
+			"strumline": 1,
+			"lane": 0,
+			"type": null
+		},
+		{
+			"length": 3,
+			"stepTime": 238,
+			"strumline": 1,
+			"lane": 3,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 224,
+			"strumline": 1,
+			"lane": 1,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 250,
+			"strumline": 1,
+			"lane": 2,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 252,
+			"strumline": 1,
+			"lane": 1,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 254,
+			"strumline": 1,
+			"lane": 0,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 242,
+			"strumline": 1,
+			"lane": 0,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 248,
+			"strumline": 1,
+			"lane": 1,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 246,
+			"strumline": 1,
+			"lane": 3,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 244,
+			"strumline": 1,
+			"lane": 1,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 256,
+			"strumline": 0,
+			"lane": 3,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 258,
+			"strumline": 0,
+			"lane": 2,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 260,
+			"strumline": 0,
+			"lane": 0,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 262,
+			"strumline": 0,
+			"lane": 1,
+			"type": null
+		},
+		{
+			"length": 3,
+			"stepTime": 264,
+			"strumline": 0,
+			"lane": 3,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 268,
+			"strumline": 0,
+			"lane": 1,
+			"type": null
+		},
+		{
+			"length": 3,
+			"stepTime": 270,
+			"strumline": 0,
+			"lane": 2,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 274,
+			"strumline": 0,
+			"lane": 3,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 276,
+			"strumline": 0,
+			"lane": 1,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 278,
+			"strumline": 0,
+			"lane": 1,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 280,
+			"strumline": 0,
+			"lane": 2,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 282,
+			"strumline": 0,
+			"lane": 3,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 284,
+			"strumline": 0,
+			"lane": 1,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 286,
+			"strumline": 0,
+			"lane": 2,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 288,
+			"strumline": 0,
+			"lane": 0,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 292,
+			"strumline": 0,
+			"lane": 3,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 294,
+			"strumline": 0,
+			"lane": 2,
+			"type": null
+		},
+		{
+			"length": 3,
+			"stepTime": 296,
+			"strumline": 0,
+			"lane": 0,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 300,
+			"strumline": 0,
+			"lane": 2,
+			"type": null
+		},
+		{
+			"length": 3,
+			"stepTime": 302,
+			"strumline": 0,
+			"lane": 3,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 290,
+			"strumline": 0,
+			"lane": 1,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 306,
+			"strumline": 0,
+			"lane": 0,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 314,
+			"strumline": 0,
+			"lane": 0,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 316,
+			"strumline": 0,
+			"lane": 2,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 318,
+			"strumline": 0,
+			"lane": 1,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 310,
+			"strumline": 0,
+			"lane": 2,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 308,
+			"strumline": 0,
+			"lane": 1,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 312,
+			"strumline": 0,
+			"lane": 1,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 320,
+			"strumline": 1,
+			"lane": 3,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 322,
+			"strumline": 1,
+			"lane": 2,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 324,
+			"strumline": 1,
+			"lane": 0,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 326,
+			"strumline": 1,
+			"lane": 1,
+			"type": null
+		},
+		{
+			"length": 3,
+			"stepTime": 328,
+			"strumline": 1,
+			"lane": 3,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 332,
+			"strumline": 1,
+			"lane": 1,
+			"type": null
+		},
+		{
+			"length": 3,
+			"stepTime": 334,
+			"strumline": 1,
+			"lane": 2,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 350,
+			"strumline": 1,
+			"lane": 3,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 338,
+			"strumline": 1,
+			"lane": 0,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 340,
+			"strumline": 1,
+			"lane": 1,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 342,
+			"strumline": 1,
+			"lane": 2,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 344,
+			"strumline": 1,
+			"lane": 1,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 346,
+			"strumline": 1,
+			"lane": 0,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 348,
+			"strumline": 1,
+			"lane": 2,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 356,
+			"strumline": 1,
+			"lane": 3,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 358,
+			"strumline": 1,
+			"lane": 2,
+			"type": null
+		},
+		{
+			"length": 3,
+			"stepTime": 360,
+			"strumline": 1,
+			"lane": 0,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 354,
+			"strumline": 1,
+			"lane": 1,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 352,
+			"strumline": 1,
+			"lane": 0,
+			"type": null
+		},
+		{
+			"length": 3,
+			"stepTime": 366,
+			"strumline": 1,
+			"lane": 2,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 364,
+			"strumline": 1,
+			"lane": 1,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 370,
+			"strumline": 1,
+			"lane": 3,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 372,
+			"strumline": 1,
+			"lane": 2,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 374,
+			"strumline": 1,
+			"lane": 1,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 376,
+			"strumline": 1,
+			"lane": 2,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 378,
+			"strumline": 1,
+			"lane": 3,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 380,
+			"strumline": 1,
+			"lane": 1,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 382,
+			"strumline": 1,
+			"lane": 0,
+			"type": null
+		},
+		{
+			"length": 3,
+			"stepTime": 390,
+			"strumline": 0,
+			"lane": 3,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 398,
+			"strumline": 0,
+			"lane": 3,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 394,
+			"strumline": 0,
+			"lane": 2,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 396,
+			"strumline": 0,
+			"lane": 1,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 388,
+			"strumline": 0,
+			"lane": 0,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 389,
+			"strumline": 0,
+			"lane": 1,
+			"type": null
+		},
+		{
+			"length": 3,
+			"stepTime": 384,
+			"strumline": 0,
+			"lane": 3,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 404,
+			"strumline": 1,
+			"lane": 0,
+			"type": null
+		},
+		{
+			"length": 3,
+			"stepTime": 406,
+			"strumline": 1,
+			"lane": 3,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 414,
+			"strumline": 1,
+			"lane": 3,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 410,
+			"strumline": 1,
+			"lane": 2,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 412,
+			"strumline": 1,
+			"lane": 1,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 405,
+			"strumline": 1,
+			"lane": 1,
+			"type": null
+		},
+		{
+			"length": 3,
+			"stepTime": 400,
+			"strumline": 1,
+			"lane": 3,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 418,
+			"strumline": 0,
+			"lane": 1,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 422,
+			"strumline": 0,
+			"lane": 3,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 424,
+			"strumline": 0,
+			"lane": 0,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 426,
+			"strumline": 0,
+			"lane": 2,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 428,
+			"strumline": 0,
+			"lane": 1,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 430,
+			"strumline": 0,
+			"lane": 3,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 416,
+			"strumline": 0,
+			"lane": 3,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 434,
+			"strumline": 0,
+			"lane": 2,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 438,
+			"strumline": 0,
+			"lane": 0,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 440,
+			"strumline": 0,
+			"lane": 2,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 442,
+			"strumline": 0,
+			"lane": 3,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 444,
+			"strumline": 0,
+			"lane": 0,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 446,
+			"strumline": 0,
+			"lane": 1,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 432,
+			"strumline": 0,
+			"lane": 1,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 436,
+			"strumline": 0,
+			"lane": 1,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 452,
+			"strumline": 0,
+			"lane": 1,
+			"type": null
+		},
+		{
+			"length": 3,
+			"stepTime": 448,
+			"strumline": 0,
+			"lane": 3,
+			"type": null
+		},
+		{
+			"length": 3,
+			"stepTime": 454,
+			"strumline": 0,
+			"lane": 2,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 458,
+			"strumline": 0,
+			"lane": 3,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 460,
+			"strumline": 0,
+			"lane": 1,
+			"type": null
+		},
+		{
+			"length": 3,
+			"stepTime": 462,
+			"strumline": 0,
+			"lane": 0,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 470,
+			"strumline": 0,
+			"lane": 3,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 472,
+			"strumline": 0,
+			"lane": 1,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 474,
+			"strumline": 0,
+			"lane": 0,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 476,
+			"strumline": 0,
+			"lane": 2,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 478,
+			"strumline": 0,
+			"lane": 3,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 466,
+			"strumline": 0,
+			"lane": 2,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 468,
+			"strumline": 0,
+			"lane": 1,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 482,
+			"strumline": 1,
+			"lane": 1,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 486,
+			"strumline": 1,
+			"lane": 3,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 488,
+			"strumline": 1,
+			"lane": 0,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 490,
+			"strumline": 1,
+			"lane": 2,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 492,
+			"strumline": 1,
+			"lane": 1,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 494,
+			"strumline": 1,
+			"lane": 3,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 480,
+			"strumline": 1,
+			"lane": 3,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 498,
+			"strumline": 1,
+			"lane": 2,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 502,
+			"strumline": 1,
+			"lane": 0,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 504,
+			"strumline": 1,
+			"lane": 2,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 506,
+			"strumline": 1,
+			"lane": 3,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 508,
+			"strumline": 1,
+			"lane": 0,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 510,
+			"strumline": 1,
+			"lane": 1,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 496,
+			"strumline": 1,
+			"lane": 1,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 500,
+			"strumline": 1,
+			"lane": 1,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 516,
+			"strumline": 1,
+			"lane": 1,
+			"type": null
+		},
+		{
+			"length": 3,
+			"stepTime": 512,
+			"strumline": 1,
+			"lane": 3,
+			"type": null
+		},
+		{
+			"length": 3,
+			"stepTime": 518,
+			"strumline": 1,
+			"lane": 2,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 522,
+			"strumline": 1,
+			"lane": 3,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 524,
+			"strumline": 1,
+			"lane": 1,
+			"type": null
+		},
+		{
+			"length": 3,
+			"stepTime": 526,
+			"strumline": 1,
+			"lane": 0,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 534,
+			"strumline": 1,
+			"lane": 3,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 536,
+			"strumline": 1,
+			"lane": 1,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 538,
+			"strumline": 1,
+			"lane": 0,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 540,
+			"strumline": 1,
+			"lane": 2,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 542,
+			"strumline": 1,
+			"lane": 3,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 530,
+			"strumline": 1,
+			"lane": 2,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 532,
+			"strumline": 1,
+			"lane": 1,
+			"type": null
+		},
+		{
+			"length": 3,
+			"stepTime": 544,
+			"strumline": 0,
+			"lane": 2,
+			"type": null
+		},
+		{
+			"length": 3,
+			"stepTime": 550,
+			"strumline": 0,
+			"lane": 1,
+			"type": null
+		},
+		{
+			"length": 3,
+			"stepTime": 558,
+			"strumline": 0,
+			"lane": 2,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 548,
+			"strumline": 0,
+			"lane": 3,
+			"type": null
+		},
+		{
+			"length": 3,
+			"stepTime": 554,
+			"strumline": 0,
+			"lane": 0,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 562,
+			"strumline": 0,
+			"lane": 1,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 566,
+			"strumline": 0,
+			"lane": 2,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 564,
+			"strumline": 0,
+			"lane": 3,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 568,
+			"strumline": 0,
+			"lane": 0,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 570,
+			"strumline": 0,
+			"lane": 3,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 572,
+			"strumline": 0,
+			"lane": 1,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 574,
+			"strumline": 0,
+			"lane": 2,
+			"type": null
+		},
+		{
+			"length": 3,
+			"stepTime": 582,
+			"strumline": 0,
+			"lane": 2,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 576,
+			"strumline": 0,
+			"lane": 3,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 578,
+			"strumline": 0,
+			"lane": 0,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 588,
+			"strumline": 0,
+			"lane": 3,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 589,
+			"strumline": 0,
+			"lane": 1,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 586,
+			"strumline": 0,
+			"lane": 0,
+			"type": null
+		},
+		{
+			"length": 3,
+			"stepTime": 590,
+			"strumline": 0,
+			"lane": 2,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 579,
+			"strumline": 0,
+			"lane": 2,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 581,
+			"strumline": 0,
+			"lane": 1,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 594,
+			"strumline": 0,
+			"lane": 1,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 602,
+			"strumline": 0,
+			"lane": 2,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 604,
+			"strumline": 0,
+			"lane": 3,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 596,
+			"strumline": 0,
+			"lane": 2,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 600,
+			"strumline": 0,
+			"lane": 0,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 598,
+			"strumline": 0,
+			"lane": 1,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 606,
+			"strumline": 0,
+			"lane": 1,
+			"type": null
+		},
+		{
+			"length": 3,
+			"stepTime": 608,
+			"strumline": 1,
+			"lane": 2,
+			"type": null
+		},
+		{
+			"length": 3,
+			"stepTime": 614,
+			"strumline": 1,
+			"lane": 1,
+			"type": null
+		},
+		{
+			"length": 3,
+			"stepTime": 622,
+			"strumline": 1,
+			"lane": 2,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 612,
+			"strumline": 1,
+			"lane": 3,
+			"type": null
+		},
+		{
+			"length": 3,
+			"stepTime": 618,
+			"strumline": 1,
+			"lane": 0,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 626,
+			"strumline": 1,
+			"lane": 1,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 630,
+			"strumline": 1,
+			"lane": 2,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 628,
+			"strumline": 1,
+			"lane": 3,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 632,
+			"strumline": 1,
+			"lane": 0,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 634,
+			"strumline": 1,
+			"lane": 3,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 636,
+			"strumline": 1,
+			"lane": 1,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 638,
+			"strumline": 1,
+			"lane": 2,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 643,
+			"strumline": 1,
+			"lane": 2,
+			"type": null
+		},
+		{
+			"length": 3,
+			"stepTime": 646,
+			"strumline": 1,
+			"lane": 2,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 640,
+			"strumline": 1,
+			"lane": 3,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 642,
+			"strumline": 1,
+			"lane": 0,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 653,
+			"strumline": 1,
+			"lane": 1,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 650,
+			"strumline": 1,
+			"lane": 0,
+			"type": null
+		},
+		{
+			"length": 3,
+			"stepTime": 654,
+			"strumline": 1,
+			"lane": 2,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 645,
+			"strumline": 1,
+			"lane": 1,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 652,
+			"strumline": 1,
+			"lane": 3,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 658,
+			"strumline": 1,
+			"lane": 1,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 666,
+			"strumline": 1,
+			"lane": 2,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 668,
+			"strumline": 1,
+			"lane": 3,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 660,
+			"strumline": 1,
+			"lane": 2,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 664,
+			"strumline": 1,
+			"lane": 0,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 662,
+			"strumline": 1,
+			"lane": 1,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 670,
+			"strumline": 1,
+			"lane": 1,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 672,
+			"strumline": 0,
+			"lane": 3,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 676,
+			"strumline": 0,
+			"lane": 0,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 674,
+			"strumline": 0,
+			"lane": 2,
+			"type": null
+		},
+		{
+			"length": 3,
+			"stepTime": 678,
+			"strumline": 0,
+			"lane": 3,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 684,
+			"strumline": 0,
+			"lane": 0,
+			"type": null
+		},
+		{
+			"length": 3,
+			"stepTime": 686,
+			"strumline": 0,
+			"lane": 2,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 682,
+			"strumline": 0,
+			"lane": 1,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 690,
+			"strumline": 0,
+			"lane": 0,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 692,
+			"strumline": 0,
+			"lane": 1,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 694,
+			"strumline": 0,
+			"lane": 1,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 696,
+			"strumline": 0,
+			"lane": 2,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 698,
+			"strumline": 0,
+			"lane": 3,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 700,
+			"strumline": 0,
+			"lane": 0,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 701,
+			"strumline": 0,
+			"lane": 1,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 702,
+			"strumline": 0,
+			"lane": 2,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 704,
+			"strumline": 0,
+			"lane": 1,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 706,
+			"strumline": 0,
+			"lane": 0,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 708,
+			"strumline": 0,
+			"lane": 2,
+			"type": null
+		},
+		{
+			"length": 3,
+			"stepTime": 710,
+			"strumline": 0,
+			"lane": 3,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 714,
+			"strumline": 0,
+			"lane": 1,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 716,
+			"strumline": 0,
+			"lane": 1,
+			"type": null
+		},
+		{
+			"length": 3,
+			"stepTime": 718,
+			"strumline": 0,
+			"lane": 2,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 729,
+			"strumline": 0,
+			"lane": 1,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 731,
+			"strumline": 0,
+			"lane": 3,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 733,
+			"strumline": 0,
+			"lane": 0,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 730,
+			"strumline": 0,
+			"lane": 2,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 732,
+			"strumline": 0,
+			"lane": 1,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 734,
+			"strumline": 0,
+			"lane": 2,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 735,
+			"strumline": 0,
+			"lane": 3,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 728,
+			"strumline": 0,
+			"lane": 0,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 726,
+			"strumline": 0,
+			"lane": 3,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 724,
+			"strumline": 0,
+			"lane": 3,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 722,
+			"strumline": 0,
+			"lane": 0,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 736,
+			"strumline": 1,
+			"lane": 3,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 740,
+			"strumline": 1,
+			"lane": 0,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 738,
+			"strumline": 1,
+			"lane": 2,
+			"type": null
+		},
+		{
+			"length": 3,
+			"stepTime": 742,
+			"strumline": 1,
+			"lane": 3,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 746,
+			"strumline": 1,
+			"lane": 2,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 748,
+			"strumline": 1,
+			"lane": 0,
+			"type": null
+		},
+		{
+			"length": 3,
+			"stepTime": 750,
+			"strumline": 1,
+			"lane": 3,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 754,
+			"strumline": 1,
+			"lane": 0,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 762,
+			"strumline": 1,
+			"lane": 3,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 764,
+			"strumline": 1,
+			"lane": 0,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 765,
+			"strumline": 1,
+			"lane": 1,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 766,
+			"strumline": 1,
+			"lane": 2,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 756,
+			"strumline": 1,
+			"lane": 2,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 758,
+			"strumline": 1,
+			"lane": 2,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 760,
+			"strumline": 1,
+			"lane": 0,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 768,
+			"strumline": 1,
+			"lane": 1,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 770,
+			"strumline": 1,
+			"lane": 0,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 772,
+			"strumline": 1,
+			"lane": 2,
+			"type": null
+		},
+		{
+			"length": 3,
+			"stepTime": 774,
+			"strumline": 1,
+			"lane": 3,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 778,
+			"strumline": 1,
+			"lane": 2,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 780,
+			"strumline": 1,
+			"lane": 0,
+			"type": null
+		},
+		{
+			"length": 3,
+			"stepTime": 782,
+			"strumline": 1,
+			"lane": 1,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 793,
+			"strumline": 1,
+			"lane": 1,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 795,
+			"strumline": 1,
+			"lane": 3,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 797,
+			"strumline": 1,
+			"lane": 0,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 794,
+			"strumline": 1,
+			"lane": 2,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 796,
+			"strumline": 1,
+			"lane": 1,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 798,
+			"strumline": 1,
+			"lane": 2,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 799,
+			"strumline": 1,
+			"lane": 3,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 792,
+			"strumline": 1,
+			"lane": 0,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 786,
+			"strumline": 1,
+			"lane": 2,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 788,
+			"strumline": 1,
+			"lane": 3,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 790,
+			"strumline": 1,
+			"lane": 1,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 800,
+			"strumline": 0,
+			"lane": 3,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 802,
+			"strumline": 0,
+			"lane": 0,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 804,
+			"strumline": 0,
+			"lane": 1,
+			"type": null
+		},
+		{
+			"length": 3,
+			"stepTime": 806,
+			"strumline": 0,
+			"lane": 2,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 810,
+			"strumline": 0,
+			"lane": 1,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 812,
+			"strumline": 0,
+			"lane": 0,
+			"type": null
+		},
+		{
+			"length": 3,
+			"stepTime": 814,
+			"strumline": 0,
+			"lane": 3,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 818,
+			"strumline": 0,
+			"lane": 2,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 820,
+			"strumline": 0,
+			"lane": 1,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 822,
+			"strumline": 0,
+			"lane": 1,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 824,
+			"strumline": 0,
+			"lane": 0,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 826,
+			"strumline": 0,
+			"lane": 3,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 828,
+			"strumline": 0,
+			"lane": 1,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 830,
+			"strumline": 0,
+			"lane": 2,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 834,
+			"strumline": 0,
+			"lane": 0,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 832,
+			"strumline": 0,
+			"lane": 1,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 836,
+			"strumline": 0,
+			"lane": 3,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 842,
+			"strumline": 0,
+			"lane": 1,
+			"type": null
+		},
+		{
+			"length": 3,
+			"stepTime": 838,
+			"strumline": 0,
+			"lane": 2,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 844,
+			"strumline": 0,
+			"lane": 1,
+			"type": null
+		},
+		{
+			"length": 3,
+			"stepTime": 846,
+			"strumline": 0,
+			"lane": 3,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 850,
+			"strumline": 0,
+			"lane": 1,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 852,
+			"strumline": 0,
+			"lane": 0,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 854,
+			"strumline": 0,
+			"lane": 0,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 856,
+			"strumline": 0,
+			"lane": 2,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 858,
+			"strumline": 0,
+			"lane": 1,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 860,
+			"strumline": 0,
+			"lane": 3,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 862,
+			"strumline": 0,
+			"lane": 0,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 864,
+			"strumline": 1,
+			"lane": 3,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 866,
+			"strumline": 1,
+			"lane": 0,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 868,
+			"strumline": 1,
+			"lane": 1,
+			"type": null
+		},
+		{
+			"length": 3,
+			"stepTime": 870,
+			"strumline": 1,
+			"lane": 2,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 874,
+			"strumline": 1,
+			"lane": 1,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 876,
+			"strumline": 1,
+			"lane": 0,
+			"type": null
+		},
+		{
+			"length": 3,
+			"stepTime": 878,
+			"strumline": 1,
+			"lane": 3,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 882,
+			"strumline": 1,
+			"lane": 2,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 890,
+			"strumline": 1,
+			"lane": 3,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 892,
+			"strumline": 1,
+			"lane": 1,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 894,
+			"strumline": 1,
+			"lane": 2,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 884,
+			"strumline": 1,
+			"lane": 0,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 886,
+			"strumline": 1,
+			"lane": 0,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 888,
+			"strumline": 1,
+			"lane": 1,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 898,
+			"strumline": 1,
+			"lane": 0,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 896,
+			"strumline": 1,
+			"lane": 1,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 908,
+			"strumline": 1,
+			"lane": 2,
+			"type": null
+		},
+		{
+			"length": 3,
+			"stepTime": 910,
+			"strumline": 1,
+			"lane": 1,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 900,
+			"strumline": 1,
+			"lane": 2,
+			"type": null
+		},
+		{
+			"length": 3,
+			"stepTime": 902,
+			"strumline": 1,
+			"lane": 3,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 906,
+			"strumline": 1,
+			"lane": 0,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 916,
+			"strumline": 1,
+			"lane": 0,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 920,
+			"strumline": 1,
+			"lane": 2,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 922,
+			"strumline": 1,
+			"lane": 1,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 924,
+			"strumline": 1,
+			"lane": 3,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 926,
+			"strumline": 1,
+			"lane": 0,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 914,
+			"strumline": 1,
+			"lane": 2,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 918,
+			"strumline": 1,
+			"lane": 1,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 928,
+			"strumline": 0,
+			"lane": 2,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 930,
+			"strumline": 0,
+			"lane": 1,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 932,
+			"strumline": 0,
+			"lane": 3,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 934,
+			"strumline": 0,
+			"lane": 2,
+			"type": null
+		},
+		{
+			"length": 3,
+			"stepTime": 936,
+			"strumline": 0,
+			"lane": 0,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 940,
+			"strumline": 0,
+			"lane": 2,
+			"type": null
+		},
+		{
+			"length": 3,
+			"stepTime": 942,
+			"strumline": 0,
+			"lane": 3,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 946,
+			"strumline": 0,
+			"lane": 0,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 948,
+			"strumline": 0,
+			"lane": 3,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 952,
+			"strumline": 0,
+			"lane": 0,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 954,
+			"strumline": 0,
+			"lane": 2,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 956,
+			"strumline": 0,
+			"lane": 3,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 958,
+			"strumline": 0,
+			"lane": 0,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 950,
+			"strumline": 0,
+			"lane": 2,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 960,
+			"strumline": 0,
+			"lane": 1,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 962,
+			"strumline": 0,
+			"lane": 2,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 964,
+			"strumline": 0,
+			"lane": 0,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 966,
+			"strumline": 0,
+			"lane": 1,
+			"type": null
+		},
+		{
+			"length": 3,
+			"stepTime": 968,
+			"strumline": 0,
+			"lane": 3,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 972,
+			"strumline": 0,
+			"lane": 1,
+			"type": null
+		},
+		{
+			"length": 3,
+			"stepTime": 974,
+			"strumline": 0,
+			"lane": 0,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 980,
+			"strumline": 0,
+			"lane": 0,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 984,
+			"strumline": 0,
+			"lane": 3,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 986,
+			"strumline": 0,
+			"lane": 1,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 988,
+			"strumline": 0,
+			"lane": 0,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 990,
+			"strumline": 0,
+			"lane": 3,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 982,
+			"strumline": 0,
+			"lane": 1,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 978,
+			"strumline": 0,
+			"lane": 3,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 992,
+			"strumline": 1,
+			"lane": 2,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 994,
+			"strumline": 1,
+			"lane": 1,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 996,
+			"strumline": 1,
+			"lane": 3,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 998,
+			"strumline": 1,
+			"lane": 2,
+			"type": null
+		},
+		{
+			"length": 3,
+			"stepTime": 1000,
+			"strumline": 1,
+			"lane": 0,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 1004,
+			"strumline": 1,
+			"lane": 1,
+			"type": null
+		},
+		{
+			"length": 3,
+			"stepTime": 1006,
+			"strumline": 1,
+			"lane": 2,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 1010,
+			"strumline": 1,
+			"lane": 0,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 1016,
+			"strumline": 1,
+			"lane": 0,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 1018,
+			"strumline": 1,
+			"lane": 2,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 1020,
+			"strumline": 1,
+			"lane": 3,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 1014,
+			"strumline": 1,
+			"lane": 2,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 1012,
+			"strumline": 1,
+			"lane": 3,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 1022,
+			"strumline": 1,
+			"lane": 0,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 1024,
+			"strumline": 1,
+			"lane": 1,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 1026,
+			"strumline": 1,
+			"lane": 2,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 1028,
+			"strumline": 1,
+			"lane": 0,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 1030,
+			"strumline": 1,
+			"lane": 1,
+			"type": null
+		},
+		{
+			"length": 3,
+			"stepTime": 1032,
+			"strumline": 1,
+			"lane": 3,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 1036,
+			"strumline": 1,
+			"lane": 1,
+			"type": null
+		},
+		{
+			"length": 3,
+			"stepTime": 1038,
+			"strumline": 1,
+			"lane": 0,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 1044,
+			"strumline": 1,
+			"lane": 0,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 1048,
+			"strumline": 1,
+			"lane": 3,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 1050,
+			"strumline": 1,
+			"lane": 1,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 1052,
+			"strumline": 1,
+			"lane": 0,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 1054,
+			"strumline": 1,
+			"lane": 3,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 1046,
+			"strumline": 1,
+			"lane": 1,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 1042,
+			"strumline": 1,
+			"lane": 3,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 1057,
+			"strumline": 0,
+			"lane": 1,
+			"type": null
+		},
+		{
+			"length": 3,
+			"stepTime": 1070,
+			"strumline": 0,
+			"lane": 2,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 1062,
+			"strumline": 0,
+			"lane": 3,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 1068,
+			"strumline": 0,
+			"lane": 3,
+			"type": null
+		},
+		{
+			"length": 3,
+			"stepTime": 1064,
+			"strumline": 0,
+			"lane": 0,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 1056,
+			"strumline": 0,
+			"lane": 0,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 1058,
+			"strumline": 0,
+			"lane": 2,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 1061,
+			"strumline": 0,
+			"lane": 2,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 1059,
+			"strumline": 0,
+			"lane": 1,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 1060,
+			"strumline": 0,
+			"lane": 0,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 1074,
+			"strumline": 0,
+			"lane": 3,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 1076,
+			"strumline": 0,
+			"lane": 0,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 1078,
+			"strumline": 0,
+			"lane": 1,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 1080,
+			"strumline": 0,
+			"lane": 3,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 1081,
+			"strumline": 0,
+			"lane": 1,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 1082,
+			"strumline": 0,
+			"lane": 2,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 1083,
+			"strumline": 0,
+			"lane": 3,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 1084,
+			"strumline": 0,
+			"lane": 0,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 1085,
+			"strumline": 0,
+			"lane": 2,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 1086,
+			"strumline": 0,
+			"lane": 1,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 1087,
+			"strumline": 0,
+			"lane": 0,
+			"type": null
+		},
+		{
+			"length": 3,
+			"stepTime": 1102,
+			"strumline": 0,
+			"lane": 3,
+			"type": null
+		},
+		{
+			"length": 3,
+			"stepTime": 1096,
+			"strumline": 0,
+			"lane": 2,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 1100,
+			"strumline": 0,
+			"lane": 0,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 1088,
+			"strumline": 0,
+			"lane": 2,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 1089,
+			"strumline": 0,
+			"lane": 1,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 1090,
+			"strumline": 0,
+			"lane": 2,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 1091,
+			"strumline": 0,
+			"lane": 3,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 1092,
+			"strumline": 0,
+			"lane": 0,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 1094,
+			"strumline": 0,
+			"lane": 1,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 1106,
+			"strumline": 0,
+			"lane": 0,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 1108,
+			"strumline": 0,
+			"lane": 3,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 1110,
+			"strumline": 0,
+			"lane": 2,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 1112,
+			"strumline": 0,
+			"lane": 0,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 1114,
+			"strumline": 0,
+			"lane": 3,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 1115,
+			"strumline": 0,
+			"lane": 0,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 1116,
+			"strumline": 0,
+			"lane": 3,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 1118,
+			"strumline": 0,
+			"lane": 0,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 1113,
+			"strumline": 0,
+			"lane": 1,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 1117,
+			"strumline": 0,
+			"lane": 2,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 1119,
+			"strumline": 0,
+			"lane": 1,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 1121,
+			"strumline": 1,
+			"lane": 1,
+			"type": null
+		},
+		{
+			"length": 3,
+			"stepTime": 1134,
+			"strumline": 1,
+			"lane": 2,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 1126,
+			"strumline": 1,
+			"lane": 3,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 1132,
+			"strumline": 1,
+			"lane": 3,
+			"type": null
+		},
+		{
+			"length": 3,
+			"stepTime": 1128,
+			"strumline": 1,
+			"lane": 0,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 1120,
+			"strumline": 1,
+			"lane": 0,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 1122,
+			"strumline": 1,
+			"lane": 2,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 1125,
+			"strumline": 1,
+			"lane": 2,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 1123,
+			"strumline": 1,
+			"lane": 1,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 1124,
+			"strumline": 1,
+			"lane": 0,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 1138,
+			"strumline": 1,
+			"lane": 3,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 1140,
+			"strumline": 1,
+			"lane": 0,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 1142,
+			"strumline": 1,
+			"lane": 1,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 1144,
+			"strumline": 1,
+			"lane": 3,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 1145,
+			"strumline": 1,
+			"lane": 1,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 1146,
+			"strumline": 1,
+			"lane": 2,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 1147,
+			"strumline": 1,
+			"lane": 3,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 1148,
+			"strumline": 1,
+			"lane": 0,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 1149,
+			"strumline": 1,
+			"lane": 2,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 1150,
+			"strumline": 1,
+			"lane": 1,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 1151,
+			"strumline": 1,
+			"lane": 0,
+			"type": null
+		},
+		{
+			"length": 3,
+			"stepTime": 1166,
+			"strumline": 1,
+			"lane": 3,
+			"type": null
+		},
+		{
+			"length": 3,
+			"stepTime": 1160,
+			"strumline": 1,
+			"lane": 2,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 1164,
+			"strumline": 1,
+			"lane": 0,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 1152,
+			"strumline": 1,
+			"lane": 2,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 1153,
+			"strumline": 1,
+			"lane": 1,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 1154,
+			"strumline": 1,
+			"lane": 2,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 1155,
+			"strumline": 1,
+			"lane": 3,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 1156,
+			"strumline": 1,
+			"lane": 1,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 1157,
+			"strumline": 1,
+			"lane": 0,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 1158,
+			"strumline": 1,
+			"lane": 3,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 1170,
+			"strumline": 1,
+			"lane": 0,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 1172,
+			"strumline": 1,
+			"lane": 3,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 1174,
+			"strumline": 1,
+			"lane": 2,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 1176,
+			"strumline": 1,
+			"lane": 0,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 1178,
+			"strumline": 1,
+			"lane": 3,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 1179,
+			"strumline": 1,
+			"lane": 0,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 1180,
+			"strumline": 1,
+			"lane": 3,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 1182,
+			"strumline": 1,
+			"lane": 0,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 1177,
+			"strumline": 1,
+			"lane": 1,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 1181,
+			"strumline": 1,
+			"lane": 2,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 1183,
+			"strumline": 1,
+			"lane": 1,
+			"type": null
+		},
+		{
+			"length": 29,
+			"stepTime": 1184,
+			"strumline": 1,
+			"lane": 2,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 1192,
+			"strumline": 0,
+			"lane": 2,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 1196,
+			"strumline": 0,
+			"lane": 1,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 1198,
+			"strumline": 0,
+			"lane": 0,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 1194,
+			"strumline": 0,
+			"lane": 3,
+			"type": null
+		},
+		{
+			"length": 7,
+			"stepTime": 1200,
+			"strumline": 0,
+			"lane": 3,
+			"type": null
+		},
+		{
+			"length": 5,
+			"stepTime": 1208,
+			"strumline": 0,
+			"lane": 2,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 1222,
+			"strumline": 0,
+			"lane": 1,
+			"type": null
+		},
+		{
+			"length": 5,
+			"stepTime": 1216,
+			"strumline": 0,
+			"lane": 3,
+			"type": null
+		},
+		{
+			"length": 3,
+			"stepTime": 1228,
+			"strumline": 0,
+			"lane": 2,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 1224,
+			"strumline": 0,
+			"lane": 0,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 1226,
+			"strumline": 0,
+			"lane": 3,
+			"type": null
+		},
+		{
+			"length": 5,
+			"stepTime": 1232,
+			"strumline": 0,
+			"lane": 1,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 1238,
+			"strumline": 0,
+			"lane": 2,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 1243,
+			"strumline": 0,
+			"lane": 1,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 1246,
+			"strumline": 0,
+			"lane": 0,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 1240,
+			"strumline": 0,
+			"lane": 3,
+			"type": null
+		},
+		{
+			"length": 7,
+			"stepTime": 1248,
+			"strumline": 0,
+			"lane": 2,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 1274,
+			"strumline": 1,
+			"lane": 1,
+			"type": null
+		},
+		{
+			"length": 3,
+			"stepTime": 1276,
+			"strumline": 1,
+			"lane": 2,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 1280,
+			"strumline": 1,
+			"lane": 3,
+			"type": null
+		},
+		{
+			"length": 3,
+			"stepTime": 1282,
+			"strumline": 1,
+			"lane": 1,
+			"type": null
+		},
+		{
+			"length": 3,
+			"stepTime": 1286,
+			"strumline": 1,
+			"lane": 3,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 1290,
+			"strumline": 1,
+			"lane": 0,
+			"type": null
+		},
+		{
+			"length": 3,
+			"stepTime": 1292,
+			"strumline": 1,
+			"lane": 1,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 1296,
+			"strumline": 1,
+			"lane": 3,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 1298,
+			"strumline": 1,
+			"lane": 2,
+			"type": null
+		},
+		{
+			"length": 3,
+			"stepTime": 1300,
+			"strumline": 1,
+			"lane": 0,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 1304,
+			"strumline": 1,
+			"lane": 1,
+			"type": null
+		},
+		{
+			"length": 3,
+			"stepTime": 1306,
+			"strumline": 1,
+			"lane": 3,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 1310,
+			"strumline": 1,
+			"lane": 1,
+			"type": null
+		},
+		{
+			"length": 29,
+			"stepTime": 1312,
+			"strumline": 1,
+			"lane": 2,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 1344,
+			"strumline": 0,
+			"lane": 1,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 1348,
+			"strumline": 0,
+			"lane": 1,
+			"type": null
+		},
+		{
+			"length": 3,
+			"stepTime": 1350,
+			"strumline": 0,
+			"lane": 2,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 1354,
+			"strumline": 0,
+			"lane": 3,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 1356,
+			"strumline": 0,
+			"lane": 1,
+			"type": null
+		},
+		{
+			"length": 3,
+			"stepTime": 1358,
+			"strumline": 0,
+			"lane": 3,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 1362,
+			"strumline": 0,
+			"lane": 2,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 1364,
+			"strumline": 0,
+			"lane": 1,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 1368,
+			"strumline": 0,
+			"lane": 2,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 1374,
+			"strumline": 0,
+			"lane": 3,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 1372,
+			"strumline": 0,
+			"lane": 0,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 1370,
+			"strumline": 0,
+			"lane": 3,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 1366,
+			"strumline": 0,
+			"lane": 0,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 1376,
+			"strumline": 1,
+			"lane": 0,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 1378,
+			"strumline": 1,
+			"lane": 3,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 1380,
+			"strumline": 1,
+			"lane": 2,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 1382,
+			"strumline": 1,
+			"lane": 0,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 1384,
+			"strumline": 1,
+			"lane": 2,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 1376,
+			"strumline": 0,
+			"lane": 0,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 1378,
+			"strumline": 0,
+			"lane": 3,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 1380,
+			"strumline": 0,
+			"lane": 2,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 1382,
+			"strumline": 0,
+			"lane": 0,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 1384,
+			"strumline": 0,
+			"lane": 2,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 1386,
+			"strumline": 1,
+			"lane": 3,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 1388,
+			"strumline": 1,
+			"lane": 1,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 1390,
+			"strumline": 1,
+			"lane": 0,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 1386,
+			"strumline": 0,
+			"lane": 3,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 1388,
+			"strumline": 0,
+			"lane": 1,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 1390,
+			"strumline": 0,
+			"lane": 0,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 1392,
+			"strumline": 1,
+			"lane": 3,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 1394,
+			"strumline": 1,
+			"lane": 1,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 1404,
+			"strumline": 1,
+			"lane": 2,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 1402,
+			"strumline": 1,
+			"lane": 3,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 1400,
+			"strumline": 1,
+			"lane": 0,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 1396,
+			"strumline": 1,
+			"lane": 2,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 1398,
+			"strumline": 1,
+			"lane": 1,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 1406,
+			"strumline": 1,
+			"lane": 1,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 1392,
+			"strumline": 0,
+			"lane": 3,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 1394,
+			"strumline": 0,
+			"lane": 1,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 1404,
+			"strumline": 0,
+			"lane": 2,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 1402,
+			"strumline": 0,
+			"lane": 3,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 1400,
+			"strumline": 0,
+			"lane": 0,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 1396,
+			"strumline": 0,
+			"lane": 2,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 1398,
+			"strumline": 0,
+			"lane": 1,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 1406,
+			"strumline": 0,
+			"lane": 1,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 1408,
+			"strumline": 1,
+			"lane": 2,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 1410,
+			"strumline": 1,
+			"lane": 0,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 1412,
+			"strumline": 1,
+			"lane": 2,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 1418,
+			"strumline": 1,
+			"lane": 2,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 1414,
+			"strumline": 1,
+			"lane": 1,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 1416,
+			"strumline": 1,
+			"lane": 3,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 1408,
+			"strumline": 0,
+			"lane": 2,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 1410,
+			"strumline": 0,
+			"lane": 0,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 1412,
+			"strumline": 0,
+			"lane": 2,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 1418,
+			"strumline": 0,
+			"lane": 2,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 1420,
+			"strumline": 0,
+			"lane": 1,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 1414,
+			"strumline": 0,
+			"lane": 1,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 1416,
+			"strumline": 0,
+			"lane": 3,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 1422,
+			"strumline": 0,
+			"lane": 3,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 1420,
+			"strumline": 1,
+			"lane": 1,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 1422,
+			"strumline": 1,
+			"lane": 3,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 1424,
+			"strumline": 1,
+			"lane": 0,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 1432,
+			"strumline": 1,
+			"lane": 3,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 1434,
+			"strumline": 1,
+			"lane": 2,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 1436,
+			"strumline": 1,
+			"lane": 1,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 1436,
+			"strumline": 1,
+			"lane": 0,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 1438,
+			"strumline": 1,
+			"lane": 2,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 1438,
+			"strumline": 1,
+			"lane": 3,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 1424,
+			"strumline": 0,
+			"lane": 0,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 1438,
+			"strumline": 0,
+			"lane": 3,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 1438,
+			"strumline": 0,
+			"lane": 2,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 1436,
+			"strumline": 0,
+			"lane": 1,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 1436,
+			"strumline": 0,
+			"lane": 0,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 1434,
+			"strumline": 0,
+			"lane": 2,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 1432,
+			"strumline": 0,
+			"lane": 3,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 1426,
+			"strumline": 0,
+			"lane": 1,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 1428,
+			"strumline": 0,
+			"lane": 2,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 1430,
+			"strumline": 0,
+			"lane": 1,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 1426,
+			"strumline": 1,
+			"lane": 1,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 1428,
+			"strumline": 1,
+			"lane": 2,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 1430,
+			"strumline": 1,
+			"lane": 1,
+			"type": null
+		},
+		{
+			"length": 3,
+			"stepTime": 1440,
+			"strumline": 0,
+			"lane": 0,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 1444,
+			"strumline": 0,
+			"lane": 3,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 1445,
+			"strumline": 0,
+			"lane": 2,
+			"type": null
+		},
+		{
+			"length": 3,
+			"stepTime": 1446,
+			"strumline": 0,
+			"lane": 0,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 1450,
+			"strumline": 0,
+			"lane": 2,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 1452,
+			"strumline": 0,
+			"lane": 1,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 1454,
+			"strumline": 0,
+			"lane": 3,
+			"type": null
+		},
+		{
+			"length": 3,
+			"stepTime": 1456,
+			"strumline": 1,
+			"lane": 0,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 1460,
+			"strumline": 1,
+			"lane": 3,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 1461,
+			"strumline": 1,
+			"lane": 2,
+			"type": null
+		},
+		{
+			"length": 3,
+			"stepTime": 1462,
+			"strumline": 1,
+			"lane": 0,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 1466,
+			"strumline": 1,
+			"lane": 2,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 1468,
+			"strumline": 1,
+			"lane": 1,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 1470,
+			"strumline": 1,
+			"lane": 3,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 1472,
+			"strumline": 0,
+			"lane": 3,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 1484,
+			"strumline": 0,
+			"lane": 1,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 1474,
+			"strumline": 0,
+			"lane": 1,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 1486,
+			"strumline": 0,
+			"lane": 2,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 1482,
+			"strumline": 0,
+			"lane": 3,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 1480,
+			"strumline": 0,
+			"lane": 0,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 1478,
+			"strumline": 0,
+			"lane": 2,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 1479,
+			"strumline": 0,
+			"lane": 1,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 1488,
+			"strumline": 0,
+			"lane": 0,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 1490,
+			"strumline": 0,
+			"lane": 3,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 1494,
+			"strumline": 0,
+			"lane": 3,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 1496,
+			"strumline": 0,
+			"lane": 1,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 1498,
+			"strumline": 0,
+			"lane": 0,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 1502,
+			"strumline": 0,
+			"lane": 1,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 1500,
+			"strumline": 0,
+			"lane": 3,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 1491,
+			"strumline": 0,
+			"lane": 1,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 1492,
+			"strumline": 0,
+			"lane": 2,
+			"type": null
+		},
+		{
+			"length": 3,
+			"stepTime": 1504,
+			"strumline": 0,
+			"lane": 2,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 1508,
+			"strumline": 0,
+			"lane": 0,
+			"type": null
+		},
+		{
+			"length": 3,
+			"stepTime": 1510,
+			"strumline": 0,
+			"lane": 3,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 1514,
+			"strumline": 0,
+			"lane": 0,
+			"type": null
+		},
+		{
+			"length": 3,
+			"stepTime": 1518,
+			"strumline": 0,
+			"lane": 2,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 1509,
+			"strumline": 0,
+			"lane": 1,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 1516,
+			"strumline": 0,
+			"lane": 1,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 1522,
+			"strumline": 0,
+			"lane": 3,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 1526,
+			"strumline": 0,
+			"lane": 0,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 1524,
+			"strumline": 0,
+			"lane": 0,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 1530,
+			"strumline": 0,
+			"lane": 0,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 1531,
+			"strumline": 0,
+			"lane": 1,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 1532,
+			"strumline": 0,
+			"lane": 2,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 1533,
+			"strumline": 0,
+			"lane": 3,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 1534,
+			"strumline": 0,
+			"lane": 1,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 1535,
+			"strumline": 0,
+			"lane": 0,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 1529,
+			"strumline": 0,
+			"lane": 2,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 1528,
+			"strumline": 0,
+			"lane": 3,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 1536,
+			"strumline": 1,
+			"lane": 3,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 1548,
+			"strumline": 1,
+			"lane": 1,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 1538,
+			"strumline": 1,
+			"lane": 1,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 1550,
+			"strumline": 1,
+			"lane": 2,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 1543,
+			"strumline": 1,
+			"lane": 1,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 1544,
+			"strumline": 1,
+			"lane": 0,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 1546,
+			"strumline": 1,
+			"lane": 3,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 1542,
+			"strumline": 1,
+			"lane": 2,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 1552,
+			"strumline": 1,
+			"lane": 0,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 1554,
+			"strumline": 1,
+			"lane": 3,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 1558,
+			"strumline": 1,
+			"lane": 3,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 1560,
+			"strumline": 1,
+			"lane": 1,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 1562,
+			"strumline": 1,
+			"lane": 0,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 1566,
+			"strumline": 1,
+			"lane": 1,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 1564,
+			"strumline": 1,
+			"lane": 3,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 1555,
+			"strumline": 1,
+			"lane": 1,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 1556,
+			"strumline": 1,
+			"lane": 2,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 1572,
+			"strumline": 1,
+			"lane": 0,
+			"type": null
+		},
+		{
+			"length": 3,
+			"stepTime": 1574,
+			"strumline": 1,
+			"lane": 3,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 1578,
+			"strumline": 1,
+			"lane": 0,
+			"type": null
+		},
+		{
+			"length": 3,
+			"stepTime": 1568,
+			"strumline": 1,
+			"lane": 2,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 1573,
+			"strumline": 1,
+			"lane": 1,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 1580,
+			"strumline": 1,
+			"lane": 1,
+			"type": null
+		},
+		{
+			"length": 3,
+			"stepTime": 1582,
+			"strumline": 1,
+			"lane": 2,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 1586,
+			"strumline": 1,
+			"lane": 3,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 1588,
+			"strumline": 1,
+			"lane": 0,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 1594,
+			"strumline": 1,
+			"lane": 0,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 1595,
+			"strumline": 1,
+			"lane": 1,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 1596,
+			"strumline": 1,
+			"lane": 2,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 1597,
+			"strumline": 1,
+			"lane": 3,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 1598,
+			"strumline": 1,
+			"lane": 1,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 1599,
+			"strumline": 1,
+			"lane": 0,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 1593,
+			"strumline": 1,
+			"lane": 2,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 1592,
+			"strumline": 1,
+			"lane": 3,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 1590,
+			"strumline": 1,
+			"lane": 1,
+			"type": null
+		},
+		{
+			"length": 3,
+			"stepTime": 1600,
+			"strumline": 0,
+			"lane": 3,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 1604,
+			"strumline": 0,
+			"lane": 0,
+			"type": null
+		},
+		{
+			"length": 3,
+			"stepTime": 1606,
+			"strumline": 0,
+			"lane": 1,
+			"type": null
+		},
+		{
+			"length": 3,
+			"stepTime": 1610,
+			"strumline": 0,
+			"lane": 3,
+			"type": null
+		},
+		{
+			"length": 3,
+			"stepTime": 1614,
+			"strumline": 0,
+			"lane": 2,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 1622,
+			"strumline": 0,
+			"lane": 2,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 1618,
+			"strumline": 0,
+			"lane": 0,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 1620,
+			"strumline": 0,
+			"lane": 3,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 1624,
+			"strumline": 0,
+			"lane": 0,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 1626,
+			"strumline": 0,
+			"lane": 3,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 1628,
+			"strumline": 0,
+			"lane": 1,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 1630,
+			"strumline": 0,
+			"lane": 2,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 1632,
+			"strumline": 0,
+			"lane": 0,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 1642,
+			"strumline": 0,
+			"lane": 1,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 1637,
+			"strumline": 0,
+			"lane": 1,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 1634,
+			"strumline": 0,
+			"lane": 3,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 1635,
+			"strumline": 0,
+			"lane": 2,
+			"type": null
+		},
+		{
+			"length": 3,
+			"stepTime": 1638,
+			"strumline": 0,
+			"lane": 2,
+			"type": null
+		},
+		{
+			"length": 3,
+			"stepTime": 1646,
+			"strumline": 0,
+			"lane": 3,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 1644,
+			"strumline": 0,
+			"lane": 0,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 1645,
+			"strumline": 0,
+			"lane": 2,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 1650,
+			"strumline": 0,
+			"lane": 1,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 1652,
+			"strumline": 0,
+			"lane": 2,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 1660,
+			"strumline": 0,
+			"lane": 3,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 1662,
+			"strumline": 0,
+			"lane": 1,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 1658,
+			"strumline": 0,
+			"lane": 2,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 1654,
+			"strumline": 0,
+			"lane": 1,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 1656,
+			"strumline": 0,
+			"lane": 0,
+			"type": null
+		},
+		{
+			"length": 3,
+			"stepTime": 1664,
+			"strumline": 1,
+			"lane": 3,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 1668,
+			"strumline": 1,
+			"lane": 0,
+			"type": null
+		},
+		{
+			"length": 3,
+			"stepTime": 1670,
+			"strumline": 1,
+			"lane": 1,
+			"type": null
+		},
+		{
+			"length": 3,
+			"stepTime": 1674,
+			"strumline": 1,
+			"lane": 3,
+			"type": null
+		},
+		{
+			"length": 3,
+			"stepTime": 1678,
+			"strumline": 1,
+			"lane": 2,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 1686,
+			"strumline": 1,
+			"lane": 2,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 1682,
+			"strumline": 1,
+			"lane": 0,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 1684,
+			"strumline": 1,
+			"lane": 3,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 1688,
+			"strumline": 1,
+			"lane": 0,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 1690,
+			"strumline": 1,
+			"lane": 3,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 1692,
+			"strumline": 1,
+			"lane": 1,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 1694,
+			"strumline": 1,
+			"lane": 2,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 1696,
+			"strumline": 1,
+			"lane": 0,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 1706,
+			"strumline": 1,
+			"lane": 1,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 1701,
+			"strumline": 1,
+			"lane": 1,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 1698,
+			"strumline": 1,
+			"lane": 3,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 1699,
+			"strumline": 1,
+			"lane": 2,
+			"type": null
+		},
+		{
+			"length": 3,
+			"stepTime": 1702,
+			"strumline": 1,
+			"lane": 2,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 1708,
+			"strumline": 1,
+			"lane": 0,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 1709,
+			"strumline": 1,
+			"lane": 2,
+			"type": null
+		},
+		{
+			"length": 3,
+			"stepTime": 1710,
+			"strumline": 1,
+			"lane": 3,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 1714,
+			"strumline": 1,
+			"lane": 1,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 1716,
+			"strumline": 1,
+			"lane": 2,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 1724,
+			"strumline": 1,
+			"lane": 3,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 1726,
+			"strumline": 1,
+			"lane": 1,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 1722,
+			"strumline": 1,
+			"lane": 2,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 1718,
+			"strumline": 1,
+			"lane": 1,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 1720,
+			"strumline": 1,
+			"lane": 0,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 1728,
+			"strumline": 0,
+			"lane": 0,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 1730,
+			"strumline": 0,
+			"lane": 3,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 1732,
+			"strumline": 0,
+			"lane": 1,
+			"type": null
+		},
+		{
+			"length": 3,
+			"stepTime": 1734,
+			"strumline": 0,
+			"lane": 2,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 1738,
+			"strumline": 0,
+			"lane": 1,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 1740,
+			"strumline": 0,
+			"lane": 0,
+			"type": null
+		},
+		{
+			"length": 3,
+			"stepTime": 1742,
+			"strumline": 0,
+			"lane": 3,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 1746,
+			"strumline": 0,
+			"lane": 0,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 1748,
+			"strumline": 0,
+			"lane": 1,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 1750,
+			"strumline": 0,
+			"lane": 1,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 1754,
+			"strumline": 0,
+			"lane": 0,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 1758,
+			"strumline": 0,
+			"lane": 1,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 1752,
+			"strumline": 0,
+			"lane": 3,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 1756,
+			"strumline": 0,
+			"lane": 3,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 1762,
+			"strumline": 0,
+			"lane": 3,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 1764,
+			"strumline": 0,
+			"lane": 1,
+			"type": null
+		},
+		{
+			"length": 3,
+			"stepTime": 1766,
+			"strumline": 0,
+			"lane": 0,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 1770,
+			"strumline": 0,
+			"lane": 1,
+			"type": null
+		},
+		{
+			"length": 3,
+			"stepTime": 1774,
+			"strumline": 0,
+			"lane": 2,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 1760,
+			"strumline": 0,
+			"lane": 2,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 1772,
+			"strumline": 0,
+			"lane": 3,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 1780,
+			"strumline": 0,
+			"lane": 0,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 1782,
+			"strumline": 0,
+			"lane": 0,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 1790,
+			"strumline": 0,
+			"lane": 0,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 1778,
+			"strumline": 0,
+			"lane": 1,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 1784,
+			"strumline": 0,
+			"lane": 3,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 1786,
+			"strumline": 0,
+			"lane": 2,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 1788,
+			"strumline": 0,
+			"lane": 1,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 1792,
+			"strumline": 0,
+			"lane": 3,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 1794,
+			"strumline": 0,
+			"lane": 0,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 1796,
+			"strumline": 0,
+			"lane": 2,
+			"type": null
+		},
+		{
+			"length": 3,
+			"stepTime": 1798,
+			"strumline": 0,
+			"lane": 3,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 1802,
+			"strumline": 0,
+			"lane": 2,
+			"type": null
+		},
+		{
+			"length": 3,
+			"stepTime": 1806,
+			"strumline": 0,
+			"lane": 0,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 1804,
+			"strumline": 0,
+			"lane": 1,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 1810,
+			"strumline": 0,
+			"lane": 3,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 1812,
+			"strumline": 0,
+			"lane": 2,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 1814,
+			"strumline": 0,
+			"lane": 2,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 1816,
+			"strumline": 0,
+			"lane": 0,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 1818,
+			"strumline": 0,
+			"lane": 3,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 1822,
+			"strumline": 0,
+			"lane": 1,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 1820,
+			"strumline": 0,
+			"lane": 0,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 1821,
+			"strumline": 0,
+			"lane": 2,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 1828,
+			"strumline": 0,
+			"lane": 1,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 1824,
+			"strumline": 0,
+			"lane": 0,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 1834,
+			"strumline": 0,
+			"lane": 1,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 1836,
+			"strumline": 0,
+			"lane": 2,
+			"type": null
+		},
+		{
+			"length": 3,
+			"stepTime": 1838,
+			"strumline": 0,
+			"lane": 3,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 1826,
+			"strumline": 0,
+			"lane": 3,
+			"type": null
+		},
+		{
+			"length": 3,
+			"stepTime": 1830,
+			"strumline": 0,
+			"lane": 2,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 1849,
+			"strumline": 0,
+			"lane": 2,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 1850,
+			"strumline": 0,
+			"lane": 1,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 1851,
+			"strumline": 0,
+			"lane": 0,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 1852,
+			"strumline": 0,
+			"lane": 2,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 1853,
+			"strumline": 0,
+			"lane": 3,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 1854,
+			"strumline": 0,
+			"lane": 1,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 1855,
+			"strumline": 0,
+			"lane": 0,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 1848,
+			"strumline": 0,
+			"lane": 3,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 1846,
+			"strumline": 0,
+			"lane": 0,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 1844,
+			"strumline": 0,
+			"lane": 0,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 1842,
+			"strumline": 0,
+			"lane": 1,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 1856,
+			"strumline": 1,
+			"lane": 0,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 1858,
+			"strumline": 1,
+			"lane": 3,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 1860,
+			"strumline": 1,
+			"lane": 1,
+			"type": null
+		},
+		{
+			"length": 3,
+			"stepTime": 1862,
+			"strumline": 1,
+			"lane": 2,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 1866,
+			"strumline": 1,
+			"lane": 1,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 1868,
+			"strumline": 1,
+			"lane": 0,
+			"type": null
+		},
+		{
+			"length": 3,
+			"stepTime": 1870,
+			"strumline": 1,
+			"lane": 3,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 1874,
+			"strumline": 1,
+			"lane": 0,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 1882,
+			"strumline": 1,
+			"lane": 0,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 1886,
+			"strumline": 1,
+			"lane": 1,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 1880,
+			"strumline": 1,
+			"lane": 3,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 1876,
+			"strumline": 1,
+			"lane": 2,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 1878,
+			"strumline": 1,
+			"lane": 2,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 1884,
+			"strumline": 1,
+			"lane": 2,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 1890,
+			"strumline": 1,
+			"lane": 3,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 1892,
+			"strumline": 1,
+			"lane": 1,
+			"type": null
+		},
+		{
+			"length": 3,
+			"stepTime": 1894,
+			"strumline": 1,
+			"lane": 0,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 1898,
+			"strumline": 1,
+			"lane": 1,
+			"type": null
+		},
+		{
+			"length": 3,
+			"stepTime": 1902,
+			"strumline": 1,
+			"lane": 2,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 1888,
+			"strumline": 1,
+			"lane": 2,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 1900,
+			"strumline": 1,
+			"lane": 3,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 1918,
+			"strumline": 1,
+			"lane": 0,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 1912,
+			"strumline": 1,
+			"lane": 3,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 1914,
+			"strumline": 1,
+			"lane": 2,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 1916,
+			"strumline": 1,
+			"lane": 1,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 1906,
+			"strumline": 1,
+			"lane": 0,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 1908,
+			"strumline": 1,
+			"lane": 3,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 1910,
+			"strumline": 1,
+			"lane": 1,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 1920,
+			"strumline": 1,
+			"lane": 3,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 1922,
+			"strumline": 1,
+			"lane": 0,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 1924,
+			"strumline": 1,
+			"lane": 2,
+			"type": null
+		},
+		{
+			"length": 3,
+			"stepTime": 1926,
+			"strumline": 1,
+			"lane": 3,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 1930,
+			"strumline": 1,
+			"lane": 2,
+			"type": null
+		},
+		{
+			"length": 3,
+			"stepTime": 1934,
+			"strumline": 1,
+			"lane": 0,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 1932,
+			"strumline": 1,
+			"lane": 1,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 1938,
+			"strumline": 1,
+			"lane": 3,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 1940,
+			"strumline": 1,
+			"lane": 2,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 1942,
+			"strumline": 1,
+			"lane": 2,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 1944,
+			"strumline": 1,
+			"lane": 0,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 1946,
+			"strumline": 1,
+			"lane": 3,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 1950,
+			"strumline": 1,
+			"lane": 1,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 1948,
+			"strumline": 1,
+			"lane": 0,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 1949,
+			"strumline": 1,
+			"lane": 2,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 1956,
+			"strumline": 1,
+			"lane": 1,
+			"type": null
+		},
+		{
+			"length": 3,
+			"stepTime": 1958,
+			"strumline": 1,
+			"lane": 3,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 1964,
+			"strumline": 1,
+			"lane": 2,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 1952,
+			"strumline": 1,
+			"lane": 0,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 1954,
+			"strumline": 1,
+			"lane": 2,
+			"type": null
+		},
+		{
+			"length": 3,
+			"stepTime": 1966,
+			"strumline": 1,
+			"lane": 1,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 1962,
+			"strumline": 1,
+			"lane": 0,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 1972,
+			"strumline": 1,
+			"lane": 3,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 1970,
+			"strumline": 1,
+			"lane": 2,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 1977,
+			"strumline": 1,
+			"lane": 2,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 1978,
+			"strumline": 1,
+			"lane": 1,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 1979,
+			"strumline": 1,
+			"lane": 0,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 1980,
+			"strumline": 1,
+			"lane": 2,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 1981,
+			"strumline": 1,
+			"lane": 3,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 1982,
+			"strumline": 1,
+			"lane": 1,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 1983,
+			"strumline": 1,
+			"lane": 0,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 1976,
+			"strumline": 1,
+			"lane": 3,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 1974,
+			"strumline": 1,
+			"lane": 1,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 1984,
+			"strumline": 0,
+			"lane": 1,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 1986,
+			"strumline": 0,
+			"lane": 2,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 1988,
+			"strumline": 0,
+			"lane": 0,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 1990,
+			"strumline": 0,
+			"lane": 3,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 1996,
+			"strumline": 0,
+			"lane": 1,
+			"type": null
+		},
+		{
+			"length": 3,
+			"stepTime": 1992,
+			"strumline": 0,
+			"lane": 2,
+			"type": null
+		},
+		{
+			"length": 3,
+			"stepTime": 1998,
+			"strumline": 0,
+			"lane": 3,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 2010,
+			"strumline": 0,
+			"lane": 0,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 2012,
+			"strumline": 0,
+			"lane": 2,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 2014,
+			"strumline": 0,
+			"lane": 3,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 2002,
+			"strumline": 0,
+			"lane": 2,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 2004,
+			"strumline": 0,
+			"lane": 3,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 2006,
+			"strumline": 0,
+			"lane": 1,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 2008,
+			"strumline": 0,
+			"lane": 2,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 2016,
+			"strumline": 0,
+			"lane": 1,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 2022,
+			"strumline": 0,
+			"lane": 1,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 2018,
+			"strumline": 0,
+			"lane": 2,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 2020,
+			"strumline": 0,
+			"lane": 3,
+			"type": null
+		},
+		{
+			"length": 3,
+			"stepTime": 2030,
+			"strumline": 0,
+			"lane": 3,
+			"type": null
+		},
+		{
+			"length": 3,
+			"stepTime": 2024,
+			"strumline": 0,
+			"lane": 2,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 2028,
+			"strumline": 0,
+			"lane": 1,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 2036,
+			"strumline": 0,
+			"lane": 2,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 2038,
+			"strumline": 0,
+			"lane": 1,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 2040,
+			"strumline": 0,
+			"lane": 2,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 2042,
+			"strumline": 0,
+			"lane": 3,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 2044,
+			"strumline": 0,
+			"lane": 1,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 2034,
+			"strumline": 0,
+			"lane": 0,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 2046,
+			"strumline": 0,
+			"lane": 0,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 2060,
+			"strumline": 0,
+			"lane": 1,
+			"type": null
+		},
+		{
+			"length": 3,
+			"stepTime": 2056,
+			"strumline": 0,
+			"lane": 2,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 2054,
+			"strumline": 0,
+			"lane": 0,
+			"type": null
+		},
+		{
+			"length": 3,
+			"stepTime": 2062,
+			"strumline": 0,
+			"lane": 3,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 2048,
+			"strumline": 0,
+			"lane": 3,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 2049,
+			"strumline": 0,
+			"lane": 2,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 2050,
+			"strumline": 0,
+			"lane": 0,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 2051,
+			"strumline": 0,
+			"lane": 1,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 2052,
+			"strumline": 0,
+			"lane": 3,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 2066,
+			"strumline": 0,
+			"lane": 1,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 2070,
+			"strumline": 0,
+			"lane": 0,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 2072,
+			"strumline": 0,
+			"lane": 3,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 2073,
+			"strumline": 0,
+			"lane": 2,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 2068,
+			"strumline": 0,
+			"lane": 2,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 2074,
+			"strumline": 0,
+			"lane": 1,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 2075,
+			"strumline": 0,
+			"lane": 0,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 2076,
+			"strumline": 0,
+			"lane": 2,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 2077,
+			"strumline": 0,
+			"lane": 3,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 2078,
+			"strumline": 0,
+			"lane": 0,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 2079,
+			"strumline": 0,
+			"lane": 1,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 2084,
+			"strumline": 0,
+			"lane": 2,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 2092,
+			"strumline": 0,
+			"lane": 1,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 2080,
+			"strumline": 0,
+			"lane": 2,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 2081,
+			"strumline": 0,
+			"lane": 3,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 2082,
+			"strumline": 0,
+			"lane": 1,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 2083,
+			"strumline": 0,
+			"lane": 0,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 2086,
+			"strumline": 0,
+			"lane": 1,
+			"type": null
+		},
+		{
+			"length": 3,
+			"stepTime": 2088,
+			"strumline": 0,
+			"lane": 3,
+			"type": null
+		},
+		{
+			"length": 3,
+			"stepTime": 2094,
+			"strumline": 0,
+			"lane": 2,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 2110,
+			"strumline": 0,
+			"lane": 0,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 2111,
+			"strumline": 0,
+			"lane": 1,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 2109,
+			"strumline": 0,
+			"lane": 2,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 2108,
+			"strumline": 0,
+			"lane": 3,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 2106,
+			"strumline": 0,
+			"lane": 1,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 2107,
+			"strumline": 0,
+			"lane": 0,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 2104,
+			"strumline": 0,
+			"lane": 2,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 2105,
+			"strumline": 0,
+			"lane": 3,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 2102,
+			"strumline": 0,
+			"lane": 1,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 2098,
+			"strumline": 0,
+			"lane": 0,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 2100,
+			"strumline": 0,
+			"lane": 3,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 2112,
+			"strumline": 1,
+			"lane": 1,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 2114,
+			"strumline": 1,
+			"lane": 2,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 2116,
+			"strumline": 1,
+			"lane": 0,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 2124,
+			"strumline": 1,
+			"lane": 1,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 2118,
+			"strumline": 1,
+			"lane": 1,
+			"type": null
+		},
+		{
+			"length": 3,
+			"stepTime": 2120,
+			"strumline": 1,
+			"lane": 3,
+			"type": null
+		},
+		{
+			"length": 3,
+			"stepTime": 2126,
+			"strumline": 1,
+			"lane": 0,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 2138,
+			"strumline": 1,
+			"lane": 0,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 2140,
+			"strumline": 1,
+			"lane": 2,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 2142,
+			"strumline": 1,
+			"lane": 3,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 2130,
+			"strumline": 1,
+			"lane": 2,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 2132,
+			"strumline": 1,
+			"lane": 3,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 2134,
+			"strumline": 1,
+			"lane": 1,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 2136,
+			"strumline": 1,
+			"lane": 2,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 2144,
+			"strumline": 1,
+			"lane": 1,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 2150,
+			"strumline": 1,
+			"lane": 1,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 2146,
+			"strumline": 1,
+			"lane": 2,
+			"type": null
+		},
+		{
+			"length": 3,
+			"stepTime": 2158,
+			"strumline": 1,
+			"lane": 3,
+			"type": null
+		},
+		{
+			"length": 3,
+			"stepTime": 2152,
+			"strumline": 1,
+			"lane": 2,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 2156,
+			"strumline": 1,
+			"lane": 1,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 2148,
+			"strumline": 1,
+			"lane": 3,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 2164,
+			"strumline": 1,
+			"lane": 2,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 2166,
+			"strumline": 1,
+			"lane": 1,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 2168,
+			"strumline": 1,
+			"lane": 2,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 2170,
+			"strumline": 1,
+			"lane": 3,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 2172,
+			"strumline": 1,
+			"lane": 1,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 2162,
+			"strumline": 1,
+			"lane": 0,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 2174,
+			"strumline": 1,
+			"lane": 0,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 2188,
+			"strumline": 1,
+			"lane": 1,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 2182,
+			"strumline": 1,
+			"lane": 0,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 2176,
+			"strumline": 1,
+			"lane": 3,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 2177,
+			"strumline": 1,
+			"lane": 2,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 2178,
+			"strumline": 1,
+			"lane": 0,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 2179,
+			"strumline": 1,
+			"lane": 1,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 2180,
+			"strumline": 1,
+			"lane": 3,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 2181,
+			"strumline": 1,
+			"lane": 2,
+			"type": null
+		},
+		{
+			"length": 3,
+			"stepTime": 2184,
+			"strumline": 1,
+			"lane": 3,
+			"type": null
+		},
+		{
+			"length": 3,
+			"stepTime": 2190,
+			"strumline": 1,
+			"lane": 2,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 2194,
+			"strumline": 1,
+			"lane": 1,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 2198,
+			"strumline": 1,
+			"lane": 0,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 2200,
+			"strumline": 1,
+			"lane": 3,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 2201,
+			"strumline": 1,
+			"lane": 2,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 2196,
+			"strumline": 1,
+			"lane": 2,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 2202,
+			"strumline": 1,
+			"lane": 1,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 2203,
+			"strumline": 1,
+			"lane": 0,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 2204,
+			"strumline": 1,
+			"lane": 2,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 2205,
+			"strumline": 1,
+			"lane": 3,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 2206,
+			"strumline": 1,
+			"lane": 0,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 2207,
+			"strumline": 1,
+			"lane": 1,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 2212,
+			"strumline": 1,
+			"lane": 2,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 2220,
+			"strumline": 1,
+			"lane": 1,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 2208,
+			"strumline": 1,
+			"lane": 2,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 2209,
+			"strumline": 1,
+			"lane": 3,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 2210,
+			"strumline": 1,
+			"lane": 1,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 2211,
+			"strumline": 1,
+			"lane": 0,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 2213,
+			"strumline": 1,
+			"lane": 3,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 2214,
+			"strumline": 1,
+			"lane": 1,
+			"type": null
+		},
+		{
+			"length": 3,
+			"stepTime": 2216,
+			"strumline": 1,
+			"lane": 0,
+			"type": null
+		},
+		{
+			"length": 3,
+			"stepTime": 2222,
+			"strumline": 1,
+			"lane": 3,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 2238,
+			"strumline": 1,
+			"lane": 0,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 2239,
+			"strumline": 1,
+			"lane": 1,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 2237,
+			"strumline": 1,
+			"lane": 2,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 2236,
+			"strumline": 1,
+			"lane": 3,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 2234,
+			"strumline": 1,
+			"lane": 1,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 2235,
+			"strumline": 1,
+			"lane": 0,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 2232,
+			"strumline": 1,
+			"lane": 2,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 2233,
+			"strumline": 1,
+			"lane": 3,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 2230,
+			"strumline": 1,
+			"lane": 1,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 2226,
+			"strumline": 1,
+			"lane": 0,
+			"type": null
+		},
+		{
+			"length": 0,
+			"stepTime": 2228,
+			"strumline": 1,
+			"lane": 3,
+			"type": null
+		},
+		{
+			"length": 29,
+			"stepTime": 2240,
+			"strumline": 1,
+			"lane": 2,
+			"type": null
+		}
+	],
+	"bpm": 200,
+	"song": "GOD EATER High Voltage"
+}

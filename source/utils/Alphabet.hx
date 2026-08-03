@@ -1,118 +1,521 @@
 package utils;
 
+import flixel.FlxG;
 import flixel.FlxSprite;
 import flixel.graphics.frames.FlxAtlasFrames;
 import flixel.group.FlxSpriteGroup;
+import flixel.math.FlxMath;
+import flixel.math.FlxPoint;
+import haxe.Json;
+import openfl.utils.Assets;
+
+using StringTools;
+
+#if sys
+import sys.FileSystem;
+import sys.io.File;
+#end
+
+enum Alignment
+{
+	LEFT;
+	CENTERED;
+	RIGHT;
+}
 
 class Alphabet extends FlxSpriteGroup
 {
-    public var text(default, set):String = "";
-    
-    private var _textWidth:Float = 0;
-    private var _textSize:Float = 1.0;
-    private var _isBold:Bool = false;
+	public var text(default, set):String;
 
-    public function new(x:Float, y:Float, text:String = "", isBold:Bool = false, textSize:Float = 1.0)
-    {
-        super(x, y);
-        this._isBold = isBold;
-        this._textSize = textSize;
-        this.text = text;
-    }
+	public var bold:Bool = false;
+	public var letters:Array<AlphaCharacter> = [];
 
-    private function set_text(newText:String):String
-    {
-        if (text == newText && members.length > 0) return text;
-        
-        text = newText;
-        clearAlphabet();
+	public var isMenuItem:Bool = false;
+	public var targetY:Int = 0;
+	public var changeX:Bool = true;
+	public var changeY:Bool = true;
 
-        var startX:Float = 0;
-        var startY:Float = 0;
-        var spaceWidth:Float = 28 * _textSize;
-        var rowHeight:Float = 70 * _textSize;
+	public var alignment(default, set):Alignment = LEFT;
+	public var scaleX(default, set):Float = 1;
+	public var scaleY(default, set):Float = 1;
+	public var rows:Int = 0;
 
-        for (i in 0...text.length)
-        {
-            var char:String = text.charAt(i);
+	public var distancePerItem:FlxPoint = new FlxPoint(20, 120);
+	public var startPosition:FlxPoint = new FlxPoint(0, 0);
 
-            // Control de salto de línea
-            if (char == "\n")
-            {
-                startX = 0;
-                startY += rowHeight;
-                continue;
-            }
+	public function new(x:Float, y:Float, text:String = "", ?bold:Bool = true)
+	{
+		super(x, y);
+		this.startPosition.x = x;
+		this.startPosition.y = y;
+		this.bold = bold;
+		this.text = text;
+	}
 
-            // Control de espacio
-            if (char == " ")
-            {
-                startX += spaceWidth;
-                continue;
-            }
+	public function setAlignmentFromString(align:String)
+	{
+		switch (align.toLowerCase().trim())
+		{
+			case 'right':
+				alignment = RIGHT;
+			case 'center' | 'centered':
+				alignment = CENTERED;
+			default:
+				alignment = LEFT;
+		}
+	}
 
-            var letter:AlphaCharacter = new AlphaCharacter(startX, startY, char, _isBold);
-            letter.scale.set(_textSize, _textSize);
-            letter.updateHitbox();
-            add(letter);
+	private function set_alignment(align:Alignment)
+	{
+		alignment = align;
+		updateAlignment();
+		return align;
+	}
 
-            // Avanzar cursor para la siguiente letra con un pequeño espacio
-            startX += letter.width + (4 * _textSize);
-        }
+	private function updateAlignment()
+	{
+		for (letter in letters)
+		{
+			var newOffset:Float = 0;
+			switch (alignment)
+			{
+				case CENTERED:
+					newOffset = letter.rowWidth / 2;
+				case RIGHT:
+					newOffset = letter.rowWidth;
+				default:
+					newOffset = 0;
+			}
 
-        _textWidth = startX;
-        return text;
-    }
+			letter.offset.x -= letter.alignOffset;
+			letter.alignOffset = newOffset * scale.x;
+			letter.offset.x += letter.alignOffset;
+		}
+	}
 
-    private function clearAlphabet():Void
-    {
-        while (members.length > 0)
-        {
-            var obj = members.shift();
-            if (obj != null) obj.destroy();
-        }
-    }
+	private function set_text(newText:String)
+	{
+		newText = newText.replace('\\n', '\n');
+		clearLetters();
+		createLetters(newText);
+		updateAlignment();
+		this.text = newText;
+		return newText;
+	}
+
+	public function clearLetters()
+	{
+		var i:Int = letters.length;
+		while (i > 0)
+		{
+			--i;
+			var letter:AlphaCharacter = letters[i];
+			if (letter != null)
+			{
+				letter.kill();
+				letters.remove(letter);
+				remove(letter);
+			}
+		}
+		letters = [];
+		rows = 0;
+	}
+
+	public function setScale(newX:Float, newY:Null<Float> = null)
+	{
+		var lastX:Float = scale.x;
+		var lastY:Float = scale.y;
+		if (newY == null)
+			newY = newX;
+		@:bypassAccessor
+		scaleX = newX;
+		@:bypassAccessor
+		scaleY = newY;
+
+		scale.x = newX;
+		scale.y = newY;
+		softReloadLetters(newX / lastX, newY / lastY);
+	}
+
+	private function set_scaleX(value:Float)
+	{
+		if (value == scaleX)
+			return value;
+
+		var ratio:Float = value / scale.x;
+		scale.x = value;
+		scaleX = value;
+		softReloadLetters(ratio, 1);
+		return value;
+	}
+
+	private function set_scaleY(value:Float)
+	{
+		if (value == scaleY)
+			return value;
+
+		var ratio:Float = value / scale.y;
+		scale.y = value;
+		scaleY = value;
+		softReloadLetters(1, ratio);
+		return value;
+	}
+
+	public function softReloadLetters(ratioX:Float = 1, ratioY:Null<Float> = null)
+	{
+		if (ratioY == null)
+			ratioY = ratioX;
+
+		for (letter in letters)
+		{
+			if (letter != null)
+			{
+				letter.setupAlphaCharacter((letter.x - x) * ratioX + x, (letter.y - y) * ratioY + y);
+			}
+		}
+	}
+
+	override function update(elapsed:Float)
+	{
+		if (isMenuItem)
+		{
+			var lerpVal:Float = Math.exp(-elapsed * 9.6);
+			if (changeX)
+				x = FlxMath.lerp((targetY * distancePerItem.x) + startPosition.x, x, lerpVal);
+			if (changeY)
+				y = FlxMath.lerp((targetY * 1.3 * distancePerItem.y) + startPosition.y, y, lerpVal);
+		}
+		super.update(elapsed);
+	}
+
+	public function snapToPosition()
+	{
+		if (isMenuItem)
+		{
+			if (changeX)
+				x = (targetY * distancePerItem.x) + startPosition.x;
+			if (changeY)
+				y = (targetY * 1.3 * distancePerItem.y) + startPosition.y;
+		}
+	}
+
+	private static var Y_PER_ROW:Float = 85;
+
+	private function createLetters(newText:String)
+	{
+		var consecutiveSpaces:Int = 0;
+
+		var xPos:Float = 0;
+		var rowData:Array<Float> = [];
+		rows = 0;
+		for (i in 0...newText.length)
+		{
+			var character:String = newText.charAt(i);
+			if (character != '\n')
+			{
+				var spaceChar:Bool = (character == " " || (bold && character == "_"));
+				if (spaceChar)
+					consecutiveSpaces++;
+
+				if (AlphaCharacter.allLetters != null
+					&& AlphaCharacter.allLetters.exists(character.toLowerCase())
+					&& (!bold || !spaceChar))
+				{
+					if (consecutiveSpaces > 0)
+					{
+						xPos += 28 * consecutiveSpaces * scaleX;
+						rowData[rows] = xPos;
+						if (!bold && xPos >= FlxG.width * 0.65)
+						{
+							xPos = 0;
+							rows++;
+						}
+					}
+					consecutiveSpaces = 0;
+
+					var letter:AlphaCharacter = cast recycle(AlphaCharacter, true);
+					letter.scale.x = scaleX;
+					letter.scale.y = scaleY;
+					letter.rowWidth = 0;
+
+					letter.setupAlphaCharacter(xPos, rows * Y_PER_ROW * scale.y, character, bold);
+					@:privateAccess letter.parent = this;
+
+					letter.row = rows;
+					var off:Float = 0;
+					if (!bold)
+						off = 2;
+					xPos += letter.width + (letter.letterOffset[0] + off) * scale.x;
+					rowData[rows] = xPos;
+
+					add(letter);
+					letters.push(letter);
+				}
+			}
+			else
+			{
+				xPos = 0;
+				rows++;
+			}
+		}
+
+		for (letter in letters)
+		{
+			letter.rowWidth = rowData[letter.row] / scale.x;
+		}
+
+		if (letters.length > 0)
+			rows++;
+	}
+}
+
+typedef Letter =
+{
+	?anim:Null<String>,
+	?offsets:Array<Float>,
+	?offsetsBold:Array<Float>
 }
 
 class AlphaCharacter extends FlxSprite
 {
-    // Mapeo de caracteres especiales a nombres seguros en el XML
-    private static var _charMap:Map<String, String> = [
-        "á" => "á",
-        "é" => "é",
-        "í" => "í",
-        "ó" => "ó",
-        "ú" => "ú",
-        "ñ" => "ñ"
-    ];
+	public var image(default, set):String;
 
-    public function new(x:Float, y:Float, char:String, isBold:Bool = false)
-    {
-        super(x, y);
-        
-        // Carga el Atlas (Asegúrate de que la ruta a tu PNG y XML sea correcta)
-        frames = FlxAtlasFrames.fromSparrow('assets/shared/images/alphabet.png', 'assets/shared/images/alphabet.xml');
+	public static var allLetters:Map<String, Null<Letter>>;
 
-        var animType:String = "lowercase";
-        if (isBold)
-        {
-            animType = "bold";
-        }
-        else if (char == char.toUpperCase() && char != char.toLowerCase())
-        {
-            animType = "uppercase";
-        }
+	public static function loadAlphabetData(request:String = 'alphabet')
+	{
+		var path:String = 'assets/shared/images/$request.json';
 
-        var charKey:String = _charMap.exists(char) ? _charMap.get(char) : char;
+		allLetters = new Map<String, Null<Letter>>();
+		try
+		{
+			#if sys
+			if (FileSystem.exists(path))
+			{
+				var data:Dynamic = Json.parse(File.getContent(path));
+				if (data.allowed != null && data.allowed.length > 0)
+				{
+					for (i in 0...data.allowed.length)
+					{
+						var char:String = data.allowed.charAt(i);
+						if (char == ' ')
+							continue;
+						allLetters.set(char.toLowerCase(), null);
+					}
+				}
 
-// Por esto (el formato correcto de tu XML):
-        var animName:String = charKey + " " + animType + " instance 10000";
-        animation.addByPrefix('idle', animName, 24, true);
-        animation.play('idle');
-        
-        if (animation.curAnim == null)
-        {
-            visible = false;
-        }
-    }
+				if (data.characters != null)
+				{
+					for (char in Reflect.fields(data.characters))
+					{
+						var letterData = Reflect.field(data.characters, char);
+						var character:String = char.toLowerCase().substr(0, 1);
+						if ((letterData.animation != null || letterData.normal != null || letterData.bold != null)
+							&& allLetters.exists(character))
+							allLetters.set(character, {anim: letterData.animation, offsets: letterData.normal, offsetsBold: letterData.bold});
+					}
+				}
+			}
+			#else
+			if (Assets.exists(path, TEXT))
+			{
+				var data:Dynamic = Json.parse(Assets.getText(path));
+				if (data.allowed != null && data.allowed.length > 0)
+				{
+					for (i in 0...data.allowed.length)
+					{
+						var char:String = data.allowed.charAt(i);
+						if (char == ' ')
+							continue;
+						allLetters.set(char.toLowerCase(), null);
+					}
+				}
+
+				if (data.characters != null)
+				{
+					for (char in Reflect.fields(data.characters))
+					{
+						var letterData = Reflect.field(data.characters, char);
+						var character:String = char.toLowerCase().substr(0, 1);
+						if ((letterData.animation != null || letterData.normal != null || letterData.bold != null)
+							&& allLetters.exists(character))
+							allLetters.set(character, {anim: letterData.animation, offsets: letterData.normal, offsetsBold: letterData.bold});
+					}
+				}
+			}
+			#end
+		}
+		catch (e:Dynamic)
+		{
+			trace('Error al cargar alphabet data: $e');
+		}
+
+		if (!allLetters.exists('?'))
+			allLetters.set('?', {anim: 'question'});
+	}
+
+	var parent:Alphabet;
+
+	public var alignOffset:Float = 0;
+	public var letterOffset:Array<Float> = [0, 0];
+
+	public var row:Int = 0;
+	public var rowWidth:Float = 0;
+	public var character:String = '?';
+
+	public function new()
+	{
+		super(x, y);
+		image = 'alphabet';
+	}
+
+	public var curLetter:Letter = null;
+
+	public function setupAlphaCharacter(x:Float, y:Float, ?character:String = null, ?bold:Null<Bool> = null)
+	{
+		this.x = x;
+		this.y = y;
+
+		if (parent != null)
+		{
+			if (bold == null)
+				bold = parent.bold;
+			this.scale.x = parent.scaleX;
+			this.scale.y = parent.scaleY;
+		}
+
+		if (character != null)
+		{
+			this.character = character;
+			curLetter = null;
+			var lowercase:String = this.character.toLowerCase();
+			if (allLetters != null && allLetters.exists(lowercase))
+				curLetter = allLetters.get(lowercase);
+			else if (allLetters != null)
+				curLetter = allLetters.get('?');
+
+			var postfix:String = '';
+			if (!bold)
+			{
+				if (isTypeAlphabet(lowercase))
+				{
+					if (lowercase != this.character)
+						postfix = ' uppercase';
+					else
+						postfix = ' lowercase';
+				}
+				else
+					postfix = ' normal';
+			}
+			else
+				postfix = ' bold';
+
+			var alphaAnim:String = lowercase;
+			if (curLetter != null && curLetter.anim != null)
+				alphaAnim = curLetter.anim;
+
+			var anim:String = alphaAnim + postfix;
+			animation.addByPrefix(anim, anim, 24);
+			animation.play(anim, true);
+			if (animation.curAnim == null)
+			{
+				if (postfix != ' bold')
+					postfix = ' normal';
+				anim = 'question' + postfix;
+				animation.addByPrefix(anim, anim, 24);
+				animation.play(anim, true);
+			}
+		}
+		updateHitbox();
+	}
+
+	public static function isTypeAlphabet(c:String)
+	{
+		var ascii = StringTools.fastCodeAt(c, 0);
+		return (ascii >= 65 && ascii <= 90) || (ascii >= 97 && ascii <= 122) || (ascii >= 192 && ascii <= 214) || (ascii >= 216 && ascii <= 246)
+			|| (ascii >= 248 && ascii <= 255);
+	}
+
+	private function set_image(name:String)
+	{
+		var graphicPath = 'assets/shared/images/$name.png';
+		var xmlPath = 'assets/shared/images/$name.xml';
+
+		if (frames == null)
+		{
+			image = name;
+			#if sys
+			if (FileSystem.exists(graphicPath) && FileSystem.exists(xmlPath))
+				frames = FlxAtlasFrames.fromSparrow(graphicPath, xmlPath);
+			else
+			#end
+			frames = FlxAtlasFrames.fromSparrow('assets/shared/images/alphabet.png', 'assets/shared/images/alphabet.xml');
+			return name;
+		}
+
+		var lastAnim:String = null;
+		if (animation != null)
+		{
+			lastAnim = animation.name;
+		}
+		image = name;
+
+		#if sys
+		if (FileSystem.exists(graphicPath) && FileSystem.exists(xmlPath))
+			frames = FlxAtlasFrames.fromSparrow(graphicPath, xmlPath);
+		else
+		#end
+		frames = FlxAtlasFrames.fromSparrow('assets/shared/images/alphabet.png', 'assets/shared/images/alphabet.xml');
+
+		if (parent != null)
+		{
+			this.scale.x = parent.scaleX;
+			this.scale.y = parent.scaleY;
+		}
+		alignOffset = 0;
+
+		if (lastAnim != null)
+		{
+			animation.addByPrefix(lastAnim, lastAnim, 24);
+			animation.play(lastAnim, true);
+			
+			updateHitbox();
+		}
+		return name;
+	}
+
+	public function updateLetterOffset()
+	{
+		if (animation.curAnim == null)
+		{
+			return;
+		}
+
+		var add:Float = 110;
+		if (animation.curAnim.name.endsWith('bold'))
+		{
+			if (curLetter != null && curLetter.offsetsBold != null)
+			{
+				letterOffset[0] = curLetter.offsetsBold[0];
+				letterOffset[1] = curLetter.offsetsBold[1];
+			}
+			add = 70;
+		}
+		else
+		{
+			if (curLetter != null && curLetter.offsets != null)
+			{
+				letterOffset[0] = curLetter.offsets[0];
+				letterOffset[1] = curLetter.offsets[1];
+			}
+		}
+		add *= scale.y;
+		offset.x += letterOffset[0] * scale.x;
+		offset.y += letterOffset[1] * scale.y - (add - height);
+	}
+	override public function updateHitbox()
+	{
+		super.updateHitbox();
+		updateLetterOffset();
+	}
 }

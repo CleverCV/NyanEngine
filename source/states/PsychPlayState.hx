@@ -9,6 +9,7 @@ import flixel.group.FlxGroup.FlxTypedGroup;
 import flixel.sound.FlxSound;
 import flixel.text.FlxText;
 import flixel.util.FlxColor;
+import objects.Countdown;
 import substates.Pause;
 #if mobile
 import flixel.group.FlxSpriteGroup;
@@ -29,38 +30,28 @@ class PsychPlayState extends FlxState
     var strumsData:Array<String> = ['arrowLEFT', 'arrowDOWN', 'arrowUP', 'arrowRIGHT'];
     var pressAnims:Array<String> = ['left press', 'down press', 'up press', 'right press'];
 
-	var psychparsr:FlxText;
-
-
 	var vocals:FlxSound;
+	var countdown:Countdown;
 
 	#if mobile
 	var hitboxGroup:FlxSpriteGroup;
 	var mobileInputState:Array<Bool> = [false, false, false, false];
 	var mobileLastInputState:Array<Bool> = [false, false, false, false];
 	var pauseButton:FlxButton;
-
 	#end
 
+	// Constructor corregido para aceptar parsedData desde PlayState.hx
     public function new(parsedData:Dynamic)
     {
         super();
         this.chartData = parsedData;
-        if (chartData.speed != null) scrollSpeed = chartData.speed;
+		if (chartData != null && chartData.speed != null)
+			scrollSpeed = chartData.speed;
     }
 
     override public function create():Void
     {
         super.create();
-
-		psychparsr = new FlxText(10, FlxG.height - 54, 0, "PsychEngine Parser Indev 1.7", 16);
-		psychparsr.font = "assets/fonts/vcr.ttf";
-		psychparsr.color = FlxColor.WHITE;
-		psychparsr.setFormat(psychparsr.font, 18, FlxColor.WHITE, LEFT);
-		psychparsr.setBorderStyle(FlxTextBorderStyle.OUTLINE, FlxColor.BLACK, 1.5);
-		psychparsr.antialiasing = true;
-		add(psychparsr);
-
 
         playerStrums = new FlxTypedGroup<FlxSprite>();
         enemyStrums = new FlxTypedGroup<FlxSprite>();
@@ -68,14 +59,13 @@ class PsychPlayState extends FlxState
 
         for (i in 0...4) {
             var enemyArrow = new FlxSprite(100 + (i * 110), 50);
-            enemyArrow.frames = FlxAtlasFrames.fromSparrow("assets/shared/images/notes/NOTE_assets.png", "assets/shared/images/notes/NOTE_assets.xml");
+			enemyArrow.frames = FlxAtlasFrames.fromSparrow("assets/shared/images/notes/strums.png", "assets/shared/images/notes/strums.xml");
             enemyArrow.animation.addByPrefix('static', strumsData[i] + '0');
             enemyArrow.animation.play('static');
             enemyArrow.setGraphicSize(Std.int(enemyArrow.width * 0.7));
             enemyArrow.updateHitbox();
 			enemyArrow.antialiasing = true;
             enemyStrums.add(enemyArrow);
-
 
             var playerArrow = new FlxSprite(700 + (i * 110), 50);
             playerArrow.frames = FlxAtlasFrames.fromSparrow("assets/shared/images/notes/NOTE_assets.png", "assets/shared/images/notes/NOTE_assets.xml");
@@ -93,11 +83,10 @@ class PsychPlayState extends FlxState
         add(grpNotes);
 
 		loadNotesFromChart();
+
 		var nombreCancion:String = StringTools.replace(PlayState.currentSong.toLowerCase(), " ", "-");
 		var rutaInst:String = "assets/shared/songs/" + nombreCancion + "/Inst.ogg";
 		var rutaVoces:String = "assets/shared/songs/" + nombreCancion + "/Voices.ogg";
-		trace("Ruta de la Inst: " + rutaInst);
-		trace("Ruta de las Voces: " + rutaVoces);
 
 		FlxG.sound.playMusic(rutaInst, 1.0, false);
 		FlxG.sound.music.pause();
@@ -112,15 +101,22 @@ class PsychPlayState extends FlxState
 		}
 		#end
 
-		FlxG.sound.music.time = 0;
-		@:privateAccess
-		if (vocals != null && vocals._sound != null)
+		// Inicializamos la cuenta regresiva
+		countdown = new Countdown();
+		add(countdown);
+		countdown.onComplete = function()
 		{
-			vocals.time = 0;
-			vocals.play();
-		}
+			FlxG.sound.music.time = 0;
+			@:privateAccess
+			if (vocals != null && vocals._sound != null)
+			{
+				vocals.time = 0;
+				vocals.play();
+			}
+			FlxG.sound.music.play();
+		};
+		countdown.start();
 
-		FlxG.sound.music.play();
 		#if mobile
 		createHitboxes();
 		#end
@@ -159,7 +155,7 @@ class PsychPlayState extends FlxState
 		add(hitboxGroup);
 
 		pauseButton = new FlxButton(FlxG.width - 100, 15);
-		pauseButton.makeGraphic(80, 80, 0xAA000000); 
+		pauseButton.makeGraphic(80, 80, 0xAA000000);
 
 		var pauseText = new FlxText(0, 15, 80, "||", 32);
 		pauseText.alignment = CENTER;
@@ -189,18 +185,9 @@ class PsychPlayState extends FlxState
 		{
 			songTime = FlxG.sound.music.time;
 		}
-		else
-		{
-			songTime += elapsed * 1000;
-		}
 
         grpNotes.forEachAlive(function(daNote:Note) {
-			var targetStrumX:Float = 0;
-            if (daNote.mustHit) {
-                targetStrumX = 700 + (daNote.noteData * 110);
-            } else {
-                targetStrumX = 100 + (daNote.noteData * 110);
-            }
+			var targetStrumX:Float = daNote.mustHit ? (700 + (daNote.noteData * 110)) : (100 + (daNote.noteData * 110));
 
 			if (daNote.isSustainNote && daNote.parentNote != null)
 			{
@@ -213,14 +200,8 @@ class PsychPlayState extends FlxState
 
 			if (daNote.isSustainNote)
 			{
-				var parentHeight:Float = 110 * 0.7; 
-				var parentPressed:Bool = false;
-
-				if (daNote.parentNote != null)
-				{
-					parentHeight = daNote.parentNote.height;
-					parentPressed = daNote.parentNote.wasPressed;
-				}
+				var parentHeight:Float = (daNote.parentNote != null) ? daNote.parentNote.height : (110 * 0.7);
+				var parentPressed:Bool = (daNote.parentNote != null) ? daNote.parentNote.wasPressed : false;
 
 				daNote.y = 50 + ((daNote.strumTime - songTime) * (scrollSpeed * 0.45)) + (parentHeight / 2) - (daNote.height * 0.5);
 
@@ -231,49 +212,41 @@ class PsychPlayState extends FlxState
 				}
 
 				if (parentPressed)
-				{
 					daNote.alpha = 0.6;
-				}
 			}
 			else
 			{
 				daNote.y = 50 + ((daNote.strumTime - songTime) * (scrollSpeed * 0.45));
 			}
 
-			if (!daNote.mustHit)
+			// Autoplay rival
+			if (!daNote.mustHit && songTime >= daNote.strumTime)
 			{
-				if (songTime >= daNote.strumTime)
+				if (!daNote.isSustainNote)
 				{
-					if (!daNote.isSustainNote)
-					{
-						var enemyStrum = enemyStrums.members[daNote.noteData];
-						if (enemyStrum != null)
-						{
-							enemyStrum.animation.play('static', true);
-						}
+					var enemyStrum = enemyStrums.members[daNote.noteData];
+					if (enemyStrum != null)
+						enemyStrum.animation.play('static', true);
 
-						if (daNote.sustainLength > 0)
-						{
-							daNote.wasPressed = true;
-							daNote.visible = false;
-						}
-						else
-						{
-							daNote.kill();
-							grpNotes.remove(daNote, true);
-						}
+					if (daNote.sustainLength > 0)
+					{
+						daNote.wasPressed = true;
+						daNote.visible = false;
 					}
 					else
 					{
-						if (daNote.parentNote != null && daNote.parentNote.wasPressed)
-						{
-							daNote.kill();
-							grpNotes.remove(daNote, true);
-						}
+						daNote.kill();
+						grpNotes.remove(daNote, true);
 					}
+				}
+				else if (daNote.parentNote != null && daNote.parentNote.wasPressed)
+				{
+					daNote.kill();
+					grpNotes.remove(daNote, true);
 				}
 			}
 
+			// Limpieza de notas perdidas
 			if (daNote.mustHit && songTime > daNote.strumTime + 160 && !daNote.wasPressed)
 			{
 				daNote.kill();
@@ -360,15 +333,12 @@ class PsychPlayState extends FlxState
 				{
 					if (daNote.mustHit && daNote.noteData == i && daNote.isSustainNote)
 					{
-						if (daNote.parentNote != null && daNote.parentNote.wasPressed)
+						if (daNote.parentNote != null && daNote.parentNote.wasPressed && songTime >= daNote.strumTime)
 						{
-							if (songTime >= daNote.strumTime)
-							{
-								daNote.kill();
-								grpNotes.remove(daNote, true);
-							}
-                        }
-                    }
+							daNote.kill();
+							grpNotes.remove(daNote, true);
+						}
+					}
                 });
             }
 
@@ -377,6 +347,7 @@ class PsychPlayState extends FlxState
                 strum.animation.play('static');
             }
 		}
+
 		#if mobile
 		for (i in 0...4)
 		{
@@ -400,15 +371,9 @@ class PsychPlayState extends FlxState
 		super.closeSubState();
 
 		if (FlxG.keys != null)
-		{
 			FlxG.keys.reset();
-		}
-
 		if (FlxG.sound.music != null)
-		{
 			FlxG.sound.music.resume();
-		}
-
 		if (vocals != null)
 		{
 			vocals.resume();
@@ -433,19 +398,10 @@ class PsychPlayState extends FlxState
             {
                 var strumTime:Float = noteData[0];
                 var noteType:Int = Std.int(noteData[1]);
-
-				var sustainLength:Float = 0;
-				if (noteData.length > 2)
-				{
-					sustainLength = noteData[2];
-				}
+				var sustainLength:Float = (noteData.length > 2) ? noteData[2] : 0;
 
                 var actualLane:Int = noteType % 4; 
-
-                var isPlayerNote:Bool = sectionMustHit;
-                if (noteType > 3) {
-                    isPlayerNote = !sectionMustHit;
-                }
+				var isPlayerNote:Bool = (noteType > 3) ? !sectionMustHit : sectionMustHit;
 
 				var parentNote = new Note(strumTime, actualLane, isPlayerNote);
 				parentNote.sustainLength = sustainLength;
