@@ -74,7 +74,7 @@ class MainMenu extends FlxState
 		psychparsr.antialiasing = true;
 		add(psychparsr);
 
-		azurengv = new FlxText(10, FlxG.height - 30, 0, "Azure Engine Indev 2.0", 16);
+		azurengv = new FlxText(10, FlxG.height - 30, 0, "Nyan Cat Engine Indev 2.0", 16);
 		azurengv.font = "assets/fonts/vcr.ttf";
 		azurengv.color = FlxColor.WHITE;
 		azurengv.setFormat(azurengv.font, 18, FlxColor.WHITE, LEFT);
@@ -191,11 +191,11 @@ class MainMenu extends FlxState
 
         if (curSelected == 0)
         {
-            FlxG.switchState(new StoryModeState());
+			FlxG.switchState(() -> new StoryModeState());
         }
         else if (curSelected == 1)
         {
-            FlxG.switchState(new FreePlayState());
+			FlxG.switchState(() -> new FreePlayState());
         }
     }
 }

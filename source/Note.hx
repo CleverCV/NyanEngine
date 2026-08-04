@@ -5,85 +5,60 @@ import flixel.graphics.frames.FlxAtlasFrames;
 
 class Note extends FlxSprite
 {
+    private static var cachedFrames:FlxAtlasFrames;
+    private static var laneNames:Array<String> = ["left", "down", "up", "right"];
+
     public var strumTime:Float = 0;
-    public var noteData:Int = 0; 
-    public var mustHit:Bool = false; 
+    public var noteData:Int = 0;
+    public var mustHit:Bool = false;
+    public var isSustainNote:Bool = false;
+    public var parentNote:Note = null;
+    public var sustainLength:Float = 0;
+    public var wasPressed:Bool = false;
 
-	// --- VARIABLES NUEVAS PARA SUSTAINS ---
-	public var isSustainNote:Bool = false;
-	public var parentNote:Note = null;
-	public var sustainLength:Float = 0;
-	public var wasPressed:Bool = false;
+    public static function getLaneName(lane:Int):String
+    {
+        var normalized = lane % laneNames.length;
+        if (normalized < 0) normalized += laneNames.length;
+        return laneNames[normalized];
+    }
 
-	public function new(strumTime:Float, noteData:Int, mustHit:Bool, isSustainNote:Bool = false, isLastSustain:Bool = false)
+    public function new(strumTime:Float, noteData:Int, mustHit:Bool, isSustainNote:Bool = false, isLastSustain:Bool = false)
     {
         super();
         this.strumTime = strumTime;
-        this.noteData = noteData;
+        this.noteData = noteData % laneNames.length;
+        if (this.noteData < 0) this.noteData += laneNames.length;
         this.mustHit = mustHit;
-		this.isSustainNote = isSustainNote;
+        this.isSustainNote = isSustainNote;
 
-        frames = FlxAtlasFrames.fromSparrow(
-            "assets/shared/images/notes/NOTE_assets.png", 
-            "assets/shared/images/notes/NOTE_assets.xml"
-        );
+        if (cachedFrames == null)
+        {
+            cachedFrames = FlxAtlasFrames.fromSparrow(
+                "assets/shared/images/notes/notes.png",
+                "assets/shared/images/notes/notes.xml"
+            );
+        }
+        frames = cachedFrames;
+        antialiasing = true;
 
-		animation.addByPrefix('purpleScroll', 'purple0');
-		animation.addByPrefix('blueScroll', 'blue0');
-		animation.addByPrefix('greenScroll', 'green0');
-		animation.addByPrefix('redScroll', 'red0');       
+        var direction = getLaneName(this.noteData);
+        animation.addByPrefix("scroll", "note " + direction + "0", 24, false);
+        animation.addByPrefix("hold", "note " + direction + " hold0", 24, false);
+        animation.addByPrefix("holdEnd", "note " + direction + " hold end", 24, false);
 
-		animation.addByPrefix('purplehold', 'purple hold piece');
-		animation.addByPrefix('purpleholdend', 'purple hold end');
-		animation.addByPrefix('bluehold', 'blue hold piece');
-		animation.addByPrefix('blueholdend', 'blue hold end');
-		animation.addByPrefix('greenhold', 'green hold piece');
-		animation.addByPrefix('greenholdend', 'green hold end');
-		animation.addByPrefix('redhold', 'red hold piece');
-		animation.addByPrefix('redholdend', 'red hold end');
-
-		var colorNames:Array<String> = ['purple', 'blue', 'green', 'red'];
-		var color:String = colorNames[noteData];
-
-		if (isSustainNote)
-		{
-			if (isLastSustain)
-			{
-				animation.play(color + 'holdend');
-			}
-			else
-			{
-				animation.play(color + 'hold');
-			}
-
-			alpha = 0.6;
-		}
-		else
-		{
-			switch (noteData)
-			{
-				case 0:
-					animation.play('purpleScroll');
-				case 1:
-					animation.play('blueScroll');
-				case 2:
-					animation.play('greenScroll');
-				case 3:
-					animation.play('redScroll');
-			}
+        if (isSustainNote)
+        {
+            animation.play(isLastSustain ? "holdEnd" : "hold");
+            alpha = 0.6;
+            scale.set(0.7, 0.7);
+        }
+        else
+        {
+            animation.play("scroll");
+            setGraphicSize(Std.int(width * 0.7));
         }
 
-		if (isSustainNote)
-		{
-			scale.set(0.7, 0.7);
-			updateHitbox();
-		}
-		else
-		{
-			setGraphicSize(Std.int(width * 0.7));
-			updateHitbox();
-		}
-        
-        antialiasing = true;
+        updateHitbox();
     }
 }

@@ -4,12 +4,12 @@ import Note;
 import flixel.FlxG;
 import flixel.FlxSprite;
 import flixel.FlxState;
-import flixel.graphics.frames.FlxAtlasFrames;
 import flixel.group.FlxGroup.FlxTypedGroup;
 import flixel.sound.FlxSound;
 import flixel.text.FlxText;
 import flixel.util.FlxColor;
 import objects.Countdown;
+import objects.StrumNote;
 import substates.Pause;
 #if mobile
 import flixel.group.FlxSpriteGroup;
@@ -25,11 +25,7 @@ class PsychPlayState extends FlxState
     var grpNotes:FlxTypedGroup<Note>;
 
     var songTime:Float = 0;
-    var scrollSpeed:Float = 2.5;
-
-    var strumsData:Array<String> = ['arrowLEFT', 'arrowDOWN', 'arrowUP', 'arrowRIGHT'];
-    var pressAnims:Array<String> = ['left press', 'down press', 'up press', 'right press'];
-
+	var scrollSpeed:Float = 2.5;
 	var vocals:FlxSound;
 	var countdown:Countdown;
 
@@ -57,27 +53,14 @@ class PsychPlayState extends FlxState
         enemyStrums = new FlxTypedGroup<FlxSprite>();
         grpNotes = new FlxTypedGroup<Note>();
 
-        for (i in 0...4) {
-            var enemyArrow = new FlxSprite(100 + (i * 110), 50);
-			enemyArrow.frames = FlxAtlasFrames.fromSparrow("assets/shared/images/notes/strums.png", "assets/shared/images/notes/strums.xml");
-            enemyArrow.animation.addByPrefix('static', strumsData[i] + '0');
-            enemyArrow.animation.play('static');
-            enemyArrow.setGraphicSize(Std.int(enemyArrow.width * 0.7));
-            enemyArrow.updateHitbox();
-			enemyArrow.antialiasing = true;
+		for (i in 0...4)
+		{
+			var enemyArrow = new StrumNote(100 + (i * 110), 50, i);
             enemyStrums.add(enemyArrow);
 
-            var playerArrow = new FlxSprite(700 + (i * 110), 50);
-            playerArrow.frames = FlxAtlasFrames.fromSparrow("assets/shared/images/notes/NOTE_assets.png", "assets/shared/images/notes/NOTE_assets.xml");
-            playerArrow.animation.addByPrefix('static', strumsData[i] + '0');
-            playerArrow.animation.addByPrefix('press', pressAnims[i]);
-            playerArrow.animation.play('static');
-            playerArrow.setGraphicSize(Std.int(playerArrow.width * 0.7));
-            playerArrow.updateHitbox();
-			playerArrow.antialiasing = true;
+			var playerArrow = new StrumNote(700 + (i * 110), 50, i);
             playerStrums.add(playerArrow);
-        }
-
+		}
         add(enemyStrums);
         add(playerStrums);
         add(grpNotes);
@@ -95,7 +78,7 @@ class PsychPlayState extends FlxState
 		#if sys
 		if (sys.FileSystem.exists(rutaVoces))
 		{
-			vocals.loadEmbedded(rutaVoces);
+			vocals.load(rutaVoces);
 			vocals.volume = 1.0;
 			FlxG.sound.list.add(vocals);
 		}
@@ -226,7 +209,7 @@ class PsychPlayState extends FlxState
 				{
 					var enemyStrum = enemyStrums.members[daNote.noteData];
 					if (enemyStrum != null)
-						enemyStrum.animation.play('static', true);
+						enemyStrum.animation.play('confirm', true);
 
 					if (daNote.sustainLength > 0)
 					{
@@ -306,12 +289,13 @@ class PsychPlayState extends FlxState
 
             if (keysJustPressed[i])
             {
-                strum.animation.play('press', true);
+				strum.animation.play('pressed', true);
                 
                 grpNotes.forEachAlive(function(daNote:Note) {
 					if (daNote.mustHit && daNote.noteData == i && !daNote.isSustainNote)
 					{
                         if (Math.abs(daNote.strumTime - songTime) < 150) {
+							strum.animation.play('confirm', true);
 							if (daNote.sustainLength > 0)
 							{
 								daNote.wasPressed = true;
@@ -342,7 +326,7 @@ class PsychPlayState extends FlxState
                 });
             }
 
-			if (!keysPressed[i] && strum.animation.curAnim != null && strum.animation.curAnim.name == 'press')
+			if (!keysPressed[i] && strum.animation.curAnim != null && strum.animation.curAnim.name == 'pressed')
             {
                 strum.animation.play('static');
             }

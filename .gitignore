@@ -1,2 +1,5 @@
 .vscode/
 # Shit from vscode
+
+# Generated Lime/OpenFL builds
+/export/

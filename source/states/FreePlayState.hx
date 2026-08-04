@@ -127,7 +127,7 @@ class FreePlayState extends FlxState
 			if (_virtualPad != null)
 				_virtualPad = flixel.util.FlxDestroyUtil.destroy(_virtualPad);
 			#end
-			FlxG.switchState(new MainMenu());
+			FlxG.switchState(() -> new MainMenu());
 		}
 
 		if (acceptPressed)
@@ -142,7 +142,7 @@ class FreePlayState extends FlxState
 
 			PlayState.chartType = "psych"; 
 			PlayState.currentSong = selectedSongName; 
-			FlxG.switchState(new PlayState());
+			FlxG.switchState(() -> new PlayState());
 		}
 	}
 

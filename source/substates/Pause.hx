@@ -62,7 +62,7 @@ class Pause extends FlxSubState
                     FlxG.resetState();
                 case "EXIT":
                     FlxG.sound.music.stop();
-                    FlxG.switchState(new FreePlayState());
+                    FlxG.switchState(() -> new FreePlayState());
             }
         }
     }

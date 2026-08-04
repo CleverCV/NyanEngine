@@ -4,8 +4,8 @@ import Note;
 import flixel.FlxG;
 import flixel.FlxSprite;
 import flixel.FlxState;
-import flixel.graphics.frames.FlxAtlasFrames;
 import flixel.group.FlxGroup.FlxTypedGroup;
+import objects.StrumNote;
 
 class VSlicePlayState extends FlxState
 {
@@ -17,10 +17,6 @@ class VSlicePlayState extends FlxState
 
 	var songTime:Float = 0;
 	var scrollSpeed:Float = 2.8;
-
-	var strumsData:Array<String> = ['arrowLEFT', 'arrowDOWN', 'arrowUP', 'arrowRIGHT'];
-	var pressAnims:Array<String> = ['left press', 'down press', 'up press', 'right press'];
-
 	public function new(parsedData:Dynamic)
 	{
 		super();
@@ -39,23 +35,10 @@ class VSlicePlayState extends FlxState
 
 		for (i in 0...4)
 		{
-			var enemyArrow = new FlxSprite(100 + (i * 110), 50);
-			enemyArrow.frames = FlxAtlasFrames.fromSparrow("assets/shared/images/notes/NOTE_assets.png", "assets/shared/images/notes/NOTE_assets.xml");
-			enemyArrow.animation.addByPrefix('static', strumsData[i] + '0'); // arrowLEFT0, etc.
-			enemyArrow.animation.play('static');
-			enemyArrow.setGraphicSize(Std.int(enemyArrow.width * 0.7));
-			enemyArrow.updateHitbox();
-			enemyArrow.antialiasing = true;
+			var enemyArrow = new StrumNote(100 + (i * 110), 50, i);
 			enemyStrums.add(enemyArrow);
 
-			var playerArrow = new FlxSprite(700 + (i * 110), 50);
-			playerArrow.frames = FlxAtlasFrames.fromSparrow("assets/shared/images/notes/NOTE_assets.png", "assets/shared/images/notes/NOTE_assets.xml");
-			playerArrow.animation.addByPrefix('static', strumsData[i] + '0');
-			playerArrow.animation.addByPrefix('press', pressAnims[i]);
-			playerArrow.animation.play('static');
-			playerArrow.setGraphicSize(Std.int(playerArrow.width * 0.7));
-			playerArrow.updateHitbox();
-			playerArrow.antialiasing = true;
+			var playerArrow = new StrumNote(700 + (i * 110), 50, i);
 			playerStrums.add(playerArrow);
 		}
 	}
@@ -123,6 +106,7 @@ class VSlicePlayState extends FlxState
 					{
 						if (Math.abs(daNote.strumTime - songTime) < 150)
 						{ 
+							strum.animation.play('confirm', true);
 							daNote.kill();
 							grpNotes.remove(daNote, true);
 						}

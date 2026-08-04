@@ -8,6 +8,7 @@ import flixel.math.FlxMath;
 import flixel.math.FlxPoint;
 import haxe.Json;
 import openfl.utils.Assets;
+import openfl.utils.AssetType;
 
 using StringTools;
 
@@ -46,6 +47,8 @@ class Alphabet extends FlxSpriteGroup
 	public function new(x:Float, y:Float, text:String = "", ?bold:Bool = true)
 	{
 		super(x, y);
+		if (AlphaCharacter.allLetters == null)
+			AlphaCharacter.loadAlphabetData();
 		this.startPosition.x = x;
 		this.startPosition.y = y;
 		this.bold = bold;
@@ -287,6 +290,10 @@ class AlphaCharacter extends FlxSprite
 		var path:String = 'assets/shared/images/$request.json';
 
 		allLetters = new Map<String, Null<Letter>>();
+		var defaultCharacters = "abcdefghijklmnopqrstuvwxyz0123456789|~#$%()*+-:;<=>@[]^_.,'!?";
+		for (i in 0...defaultCharacters.length)
+			allLetters.set(defaultCharacters.charAt(i), null);
+
 		try
 		{
 			#if sys
@@ -317,7 +324,7 @@ class AlphaCharacter extends FlxSprite
 				}
 			}
 			#else
-			if (Assets.exists(path, TEXT))
+			if (Assets.exists(path, AssetType.TEXT))
 			{
 				var data:Dynamic = Json.parse(Assets.getText(path));
 				if (data.allowed != null && data.allowed.length > 0)
@@ -365,7 +372,7 @@ class AlphaCharacter extends FlxSprite
 
 	public function new()
 	{
-		super(x, y);
+		super(0, 0);
 		image = 'alphabet';
 	}
 
@@ -394,21 +401,11 @@ class AlphaCharacter extends FlxSprite
 			else if (allLetters != null)
 				curLetter = allLetters.get('?');
 
-			var postfix:String = '';
-			if (!bold)
-			{
-				if (isTypeAlphabet(lowercase))
-				{
-					if (lowercase != this.character)
-						postfix = ' uppercase';
-					else
-						postfix = ' lowercase';
-				}
-				else
-					postfix = ' normal';
-			}
+			var postfix:String;
+			if (isTypeAlphabet(lowercase))
+				postfix = (lowercase == this.character) ? ' bold' : ' uppercase';
 			else
-				postfix = ' bold';
+				postfix = (bold == true) ? ' bold' : ' normal';
 
 			var alphaAnim:String = lowercase;
 			if (curLetter != null && curLetter.anim != null)
@@ -454,10 +451,8 @@ class AlphaCharacter extends FlxSprite
 		}
 
 		var lastAnim:String = null;
-		if (animation != null)
-		{
-			lastAnim = animation.name;
-		}
+		if (animation != null && animation.curAnim != null)
+			lastAnim = animation.curAnim.name;
 		image = name;
 
 		#if sys
@@ -490,6 +485,10 @@ class AlphaCharacter extends FlxSprite
 		{
 			return;
 		}
+
+		letterOffset[0] = 0;
+		letterOffset[1] = 0;
+		offset.set(alignOffset, 0);
 
 		var add:Float = 110;
 		if (animation.curAnim.name.endsWith('bold'))
